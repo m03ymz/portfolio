@@ -1,0 +1,38 @@
+<section>
+    <div class="contact-text">
+        <div>
+            <img src="../../assets/img/line-contact.png" alt="">
+            <h4>Contact</h4>
+        </div>
+        <p>Got a problem to solve?</p>
+        <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work. <br><br> Need a Frontend developer? Contact me!</span>
+    </div>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-formular">
+
+        <label for="name"></label>
+        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required (blur)="onBlur($event)" (ngModelChange)="validateForm()" [ngClass]="{'valid': name.valid && name.touched, 'invalid': !name.valid && name.touched}">
+        <!-- @if (!name.valid && name.touched) {
+            <div><span>your name is required</span></div>
+        } -->
+        <div *ngIf="!name.valid && name.touched">
+            <span>your name is required</span>
+        </div>
+
+        <label for="email"></label>
+        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" (blur)="onBlur($event)" (ngModelChange)="validateForm()" [ngClass]="{'valid': email.valid && email.touched, 'invalid': !email.valid && email.touched}">
+        @if (!email.valid && email.touched) {
+            <div><span>your email is required</span></div>
+        }
+
+        <label for="message"></label>
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message" required (blur)="onBlur($event)" (ngModelChange)="validateForm()" [ngClass]="{'valid': message.valid && message.touched, 'invalid': !message.valid && message.touched}"></textarea>
+        @if (!message.valid && message.touched) {
+            <div><span>your message is empty</span></div>
+        }
+
+        <input type="checkbox" id="privacyPolicyCheckbox" class="custom-checkbox" (change)="validateForm()">
+        <label for="privacyPolicyCheckbox">I've read the privacy policy and agree to the processing of my data as outlined.</label>
+        <!-- <div *ngIf="!privacyPolicyAccepted && submitClicked" class="privacy-policy-error">Please accept the privacy policy.</div> -->
+        <input type="submit" id="submitButton" value="send message :)" [disabled]="submitButtonDisabled" (click)="onSubmitClick()">
+    </form>
+</section>

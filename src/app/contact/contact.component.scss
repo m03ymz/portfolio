@@ -1,0 +1,298 @@
+section {
+    max-width: 100%;
+    background-color: #141D2F;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.contact-text {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 400px;
+    margin-right: 200px;
+    // > div img {
+    // }
+    >div h4 {
+        font-size: 90px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-left: 48px;
+    }
+    >p {
+        font-size: 32px;
+        font-weight: 700;
+        padding-left: 100px;
+    }
+    >span {
+        padding-left: 100px;
+    }
+    >div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.contact-formular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 100px;
+    padding-top: 170px;
+    gap: 2px;
+    >input[type=text],[type=email], select {
+        width: 700px;
+        height: 50px;
+        border-radius: 10px;
+        border-color: #FF4747;
+        background-color: #141D2F !important;
+        // margin-bottom: 30px;
+        color: white;
+        padding-left: 10px;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    >input:hover {
+        border-color: #E86F00;
+    }
+    >textarea, select {
+        width: 700px;
+        height: 250px;
+        border-color: #FF4747;
+        background-color: #141D2F;
+        border-radius: 10px;
+        color: white;
+        padding-left: 10px;
+        padding-top: 5px;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    >textarea:hover {
+        border-color: #E86F00;
+    }
+    // >span {
+    //     margin-top: 10px;
+    // }
+}
+
+input::-webkit-input-placeholder {
+    color: white; 
+    text-indent: 20px;
+    font-size: 16px;
+}
+  
+input::-moz-placeholder {
+    color: white; 
+    text-indent: 20px;
+    font-size: 16px;
+}
+  
+input:-ms-input-placeholder {
+    color: white; 
+    text-indent: 20px;
+    font-size: 16px;
+} 
+
+textarea::-webkit-input-placeholder {
+    color: white; 
+    padding-top: 10px;
+    text-indent: 20px; 
+    font-size: 16px; 
+}
+  
+textarea::-moz-placeholder {
+    color: white; 
+    padding-top: 10px;
+    text-indent: 20px; 
+    font-size: 16px; 
+}
+  
+textarea:-ms-input-placeholder {
+    color: white; 
+    padding-top: 10px;
+    text-indent: 20px; 
+    font-size: 16px; 
+}
+
+input[type=submit] {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #E86F00;
+    margin-top: 50px;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    position: relative;
+    z-index: 99999;
+    transition: all 0.1s ease;
+}
+
+form span {
+    color: red;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+form div {
+    width: 700px;
+}
+
+.contact-formular input.valid, 
+.contact-formular textarea.valid {
+    border-color: #00ff00;
+    background-color: #141D2F;
+}
+
+.contact-formular input.invalid, 
+.contact-formular textarea.invalid {
+    border-color: red;
+    background-color: #141D2F;
+}
+
+.contact-formular input:focus, 
+.contact-formular textarea:focus {
+    border-color: #E86F00;
+    outline: none; /* Entfernt den Standard-Fokusrahmen */
+    background-color: #141D2F;
+}
+
+.contact-formular input.valid:focus,
+.contact-formular textarea.valid:focus {
+    border-color: #00ff00;
+}
+
+input.valid, textarea.valid {
+    background-image: url(../../assets/img/valid.png);
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 30px; /* Anpassung der Größe des Bildes */
+}
+
+input.invalid, textarea.invalid {
+    background-image: url(../../assets/img/invalid.png);
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 30px; /* Anpassung der Größe des Bildes */
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Farbe des Placeholders bei Fokus */
+    opacity: 0.5;                    /* Opazität des Placeholders bei Fokus */
+}
+
+.custom-checkbox {
+    display: none; /* Verstecke das standardmäßige Kontrollkästchen */
+}
+
+.custom-checkbox + label {
+    position: relative;
+    padding-left: 30px; /* Platz für das benutzerdefinierte Kontrollkästchen */
+    cursor: pointer;
+    line-height: 20px; /* Gleich der Höhe des benutzerdefinierten Kontrollkästchens */
+    margin-top: 15px;
+}
+
+.custom-checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px; /* Breite des benutzerdefinierten Kontrollkästchens */
+    height: 22px; /* Höhe des benutzerdefinierten Kontrollkästchens */
+    border: 2px solid #E86F00; /* Randstil und Farbe */
+    box-sizing: border-box; /* Berücksichtigt den Rand in der Größe */
+    text-align: center; /* Zentriert den Inhalt horizontal */
+    line-height: 20px; /* Gleich der Höhe des benutzerdefinierten Kontrollkästchens */
+}
+
+/* Benutzerdefiniertes Aussehen des Häkchens, wenn das Kontrollkästchen aktiviert ist */
+.custom-checkbox:checked + label::before {
+    content: "\2714"; /* Unicode für ein Häkchen */
+    font-size: 16px; /* Größe des Häkchens */
+    color: #E86F00; /* Farbe des Häkchens */
+}
+
+#submitButton[disabled] {
+    background-color: #ccc; /* Hintergrundfarbe grau */
+    opacity: 0.5; /* Undurchsichtigkeit auf 50% setzen */
+    // cursor: not-allowed;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+    section {
+        flex-direction: column;
+    }
+    .contact-formular {
+        padding-right: 0;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contact-formular {
+        >input[type=text],[type=email], select {
+            width: 80%;
+        }
+        >textarea, select {
+            width: 80%;
+        }
+    }
+    form div {
+        width: 80%;
+    }
+    .custom-checkbox + label {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-text {
+        margin-right: 0;
+        >div h4 {
+            font-size: 64px;
+            padding-left: 24px;
+        }
+        >p {
+            font-size: 24px;
+            padding-left: 84px;
+        }
+        >span {
+            font-size: 14px;
+            padding-left: 84px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contact-text {
+        width: unset;
+        >div img {
+            width: 20px;
+            height: 4px;
+        }
+        >div h4 {
+            font-size: 48px;
+            padding-left: 5px;
+        }
+        >p {
+            font-size: 20px;
+            padding-left: 32px;
+        }
+        >span {
+            font-size: 14px;
+            padding-left: 32px;
+            width: 250px;
+        }
+    }
+}

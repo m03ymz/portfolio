@@ -1,0 +1,154 @@
+section {
+    // height: 70vh;
+    max-width: 100%;
+    background-color: #141D2F;
+    color: white;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    // align-items: center;
+    position: relative;
+    overflow: hidden;
+    >p {
+        font-size: 16px;
+    }
+}
+
+.project1-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    margin-left: 300px;
+    padding-right: 100px;
+    z-index: 2;
+    >img {
+        height: 500px;
+        z-index: 2;
+    }
+    >div {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+h2 {
+    font-size: 32px;
+    color: #FF4747;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+}
+
+h3 {
+    font-size: 23px;
+    color: #FA7902;
+}
+
+span {
+    font-size: 16px;
+}
+
+.main-button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 23px;
+    color: white;
+    background-color: #FF4747;
+    cursor: pointer;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-button:hover {
+    background-color: #FA7902; 
+}
+
+.main-button2 {
+    border: 2px solid #FA7902;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 23px;
+    color: white;
+    background-color: #141D2F;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 70px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-button2:hover {
+    background-color: #FA7902; 
+}
+
+.shadow {
+    position: absolute;
+    left: -50px;
+    height: 700px;
+    top: -70px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .project1-box {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 150px;
+        margin-left: 0;
+        padding-right: 0;
+        >div {
+            align-items: center;
+            text-align: center;
+            margin-top: -80px;
+        }
+    }
+    .shadow {
+        left: unset;
+        margin-left: 0;
+        height: 600px;
+        top: 15px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .project1-box {
+        >img {
+            height: 400px;
+        }
+        >div {
+            width: unset;
+        }
+        >div span {
+            width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .project1-box {
+        >img {
+            height: 300px;
+        }
+        >div span {
+            width: 280px;
+        }
+    }
+    .main-button {
+        padding: 5px 10px;
+    }
+    .main-button2 {
+        padding: 5px 10px;
+        margin-left: 50px;
+    }
+    h3 {
+        width: 250px;
+    }
+    .shadow {
+        left: unset;
+        margin-left: 0;
+        height: 500px;
+        top: -50px;
+    }
+}

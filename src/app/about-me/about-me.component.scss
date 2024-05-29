@@ -1,0 +1,119 @@
+section {
+    max-width: 100%;
+    background-color: #141D2F;
+    color: white;
+    position: relative;
+    z-index: 200;
+    margin-top: -210px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    overflow: hidden;
+    >h1 {
+        font-size: 90px;
+        font-weight: 700;
+    }
+}
+
+.about-me-box {
+    width: 400px;
+}
+
+.about-me-text {
+    padding-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about-me-text2 {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    >img {
+        height: 50px;
+        padding-right: 13px;
+    }
+}
+
+.about-me-text3 {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    >img {
+        height: 50px;
+    }
+}
+
+.vector {
+    position: absolute;
+    right: 0;
+    top: 350px;
+}
+
+.ellipse {
+    position: absolute;
+    right: 267px;
+    top: 200px;
+    height: 300px; 
+}
+
+.portfolio-img {
+    position: absolute;
+    right: 271px;
+    top: 205px;
+    height: 293px;
+    clip-path: circle(50%);
+}
+
+.shadow {
+    position: absolute;
+    right: -400px;
+}
+
+@media screen and (max-width: 1500px) {
+    section {
+        margin-top: -275px;
+        z-index: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    section {
+        align-items: center;
+        padding-left: unset;
+        >img {
+            display: none;
+        } 
+    }
+    .shadow {
+        right: 300px;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    section h1 {
+        font-size: 70px;
+    }
+    .about-me-box {
+        >div {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    section h1 {
+        font-size: 54px;
+    }
+    .about-me-box {
+        width: 280px;
+    }
+}

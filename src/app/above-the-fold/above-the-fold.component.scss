@@ -1,0 +1,271 @@
+section {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    // justify-content: center;
+    justify-content: space-around;
+    background-color: #141D2F;
+    margin-top: 174px;
+}
+
+.portfolio-img {
+    height: 77%;
+    z-index: 5;
+}
+
+// .shadow {
+//     height: 70%;
+//     position: absolute;
+//     left: 120px;
+//     top: 120px;
+// }
+
+.main-info {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.name {
+    white-space: nowrap;
+    font-size: 90px;
+    font-weight: 700;
+}
+.title {
+    font-size: 58px;
+    font-weight: 400;
+    color: #FF4747;
+    white-space: nowrap;
+}
+
+.i-am-text {
+    white-space: nowrap;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    font-size: 64px;
+    font-weight: 400;
+    margin-right: 20px;
+    // margin-top: 10px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-button {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        color: white;
+        background-color: #E86F00;
+        margin-top: 50px;
+        font-size: 23px;
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+        position: relative;
+        z-index: 99999;
+        transition: all 0.1s ease;
+        text-decoration: none;
+}
+
+.main-button:hover {
+    transform: scale(1.2); 
+    background-color: #FF4747; 
+}
+
+.full-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-top: 100px;
+    z-index: 5;
+}
+
+.shadow {
+    position: absolute;
+    z-index: 4;
+    height: 700px;
+    margin-left: -1000px;
+    margin-top: -30px;
+}
+
+@media screen and (max-width: 1500px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 220px;
+        justify-content: center;
+    }
+    .full-box {
+        // position: unset;
+        z-index: 999999;
+        margin-top: 100px;
+        position: relative;
+        top: -240px;
+        padding-top: unset;
+    }
+    .i-am-text {
+        width: 72px;
+        margin-right: 0;
+    }
+    .portfolio-img {
+        margin-top: 20px;
+    }
+    .shadow {
+        margin-left: 0;
+        margin-top: -300px;
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .name {
+        font-size: 72px;
+        // height: 87px;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .portfolio-img {
+        margin-bottom: 50px;
+    }
+    .full-box {
+        top: -250px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .name {
+        font-size: 54px;
+        // height: 69px;
+    }
+    .title {
+        font-size: 22px;
+    }
+    .i-am-text {
+        font-size: 44px;
+        width: 48px;
+    }
+    .portfolio-img {
+        // margin-bottom: 254px;
+        margin-bottom: 300px;
+    }
+    .full-box {
+        margin-top: -100px;
+        top: -275px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .name {
+        font-size: 44px;
+        // height: 59px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .i-am-text {
+        font-size: 36px;
+        width: 46px;
+    }
+    .main-button {
+        padding: 8px 16px;
+    }
+    .shadow {
+        height: 500px;
+        margin-top: -400px;
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .name {
+        font-size: 38px;
+        // height: 53px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .i-am-text {
+        font-size: 32px;
+        width: 44px;
+    }
+    .shadow {
+        width: 395px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .name {
+        font-size: 32px;
+        // height: 47px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .i-am-text {
+        font-size: 30px;
+        width: 40px;
+    }
+    .portfolio-img {
+        height: 70%;
+        margin-bottom: 370px;
+    }
+    .shadow {
+        width: 345px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .name {
+        font-size: 28px;
+        // height: 39px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .i-am-text {
+        font-size: 26px;
+        width: 34px;
+    }
+    .main-button {
+        padding: 6px 12px;
+    }
+    .portfolio-img {
+        height: 65%;
+        margin-bottom: 400px;
+    }
+    .shadow {
+        width: 315px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .portfolio-img {
+        height: 60%;
+        margin-bottom: 425px;
+    }
+    .name {
+        font-size: 26px;
+        // height: 39px;
+    }
+    .title {
+        font-size: 18px;
+    }
+    .i-am-text {
+        font-size: 24px;
+        width: 30px;
+    }
+    .shadow {
+        width: 290px;
+    }
+}

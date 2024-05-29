@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1920px; 
+    background-color: #141D2F;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+#about-me {
+    scroll-margin-top: 55px; 
+}
+
+#my-skills {
+    scroll-margin-top: 110px; 
+}
+
+#portfolio {
+    scroll-margin-top: 90px; 
+}
+
+#contact {
+    scroll-margin-top: 100px; 
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+      padding-left: calc((100vw - 1920px) / 2); /* Berechnet den zusätzlichen linken Abstand */
+      padding-right: calc((100vw - 1920px) / 2); /* Berechnet den zusätzlichen rechten Abstand */
+    }
+}

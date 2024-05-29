@@ -1,0 +1,188 @@
+section {
+    max-width: 100%;
+    background-color: #141D2F;
+    color: white;
+    padding-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.skill-icons {
+    width: 580px;
+    // height: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    >div {
+        position: relative;
+        height: 70px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 7px;
+        text-align: center;
+        >span {
+            white-space: nowrap;
+        }
+    }
+    >div:hover img {
+        animation: shake 0.5s ease infinite; 
+    }
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.my-skills {
+    width: 419px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    >div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    >div h1 {
+        font-size: 90px;
+        font-weight: 700;
+        margin-block-start: 0.3em;
+        margin-block-end: 0.3em;
+        white-space: nowrap;
+    }
+}
+
+.main-button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 23px;
+    color: white;
+    background-color: #E86F00;
+    cursor: pointer;
+    margin-top: 50px;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.1s ease;
+    text-decoration: none;
+}
+
+.main-button:hover {
+    transform: scale(1.2); 
+    background-color: #FF4747; 
+}
+
+.main-button2 {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 23px;
+    color: white;
+    background-color: #E86F00;
+    cursor: pointer;
+    margin-top: 50px;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.1s ease;
+    display: none;
+    text-decoration: none;
+    z-index: 9999999999999999999999999999999999999999999999999;
+}
+
+.main-button2:hover {
+    transform: scale(1.2); 
+    background-color: #FF4747; 
+}
+
+.shadow {
+    position: absolute;
+    left: -250px;
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 100px;
+        padding-left: unset;
+    }
+    .my-skills-box {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .main-button {
+        display: none;
+    }
+    .main-button2 {
+        display: unset;
+    }
+    .my-skills {
+        >span {
+            padding-right: 28px;
+            padding-left: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .skill-icons {
+        width: unset;
+        gap: 80px;
+    }
+    .shadow {
+        left: -350px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .skill-icons {
+        gap: 80px;
+        >div {
+            height: 60px;
+            width: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .my-skills {
+        >div h1 {
+            font-size: 66px;
+        }
+        >span {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skill-icons {
+        width: 330px;
+        gap: 60px;
+        >div {
+            height: 40px;
+            width: 40px;
+        }
+    }
+    .my-skills {
+        >div h1 {
+            font-size: 54px;
+        }
+        >span {
+            font-size: 14px;
+        }
+    }
+}

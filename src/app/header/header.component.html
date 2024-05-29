@@ -1,0 +1,10 @@
+<header>
+    <img class="logo" src="../../assets/img/my-logo.png" alt="" (click)="reloadPage()">
+    <div>
+        <a href="#about-me">About me</a>
+        <a href="#my-skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+    </div>
+    <img (click)="toggleMenu()" *ngIf="!isMenuOpen" class="burger-menu" src="../../assets/img/burger-menu.png" alt="">
+    <img (click)="toggleMenu()" *ngIf="isMenuOpen" class="close-button" src="../../assets/img/close.png" alt="">
+</header>
