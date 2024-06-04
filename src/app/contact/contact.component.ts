@@ -1,15 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, MatSnackBarModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  http = inject(HttpClient)
+  snackBar = inject(MatSnackBar);
 
   contactData = {
     name: "",
@@ -21,15 +26,15 @@ export class ContactComponent {
   privacyPolicyAccepted: boolean = false;
   submitClicked: boolean = false;
 
-  onSubmit(ngForm: NgForm) {
-    if (!this.privacyPolicyAccepted && this.submitClicked) {
-        return; // Stoppen Sie den Prozess hier, wenn die Datenschutzrichtlinie nicht akzeptiert wurde und der Submit-Button geklickt wurde
-    }
+//   onSubmit(ngForm: NgForm) {
+//     if (!this.privacyPolicyAccepted && this.submitClicked) {
+//         return; // Stoppen Sie den Prozess hier, wenn die Datenschutzrichtlinie nicht akzeptiert wurde und der Submit-Button geklickt wurde
+//     }
     
-    if (ngForm.valid) {
-        console.log(this.contactData);
-    }
-}
+//     if (ngForm.valid) {
+//         console.log(this.contactData);
+//     }
+// }
 
   // onFocus(event: any) {
   //   event.target.placeholder = '';
@@ -55,37 +60,40 @@ export class ContactComponent {
     this.validateForm();
   }
 
-  // mailTest = true;
+  mailTest = false;
 
-  // post = {
-  //   endPoint: 'https://deineDomain.de/sendMail.php',
-  //   body: (payload: any) => JSON.stringify(payload),
-  //   options: {
-  //     headers: {
-  //       'Content-Type': 'text/plain',
-  //       responseType: 'text',
-  //     },
-  //   },
-  // };
+  post = {
+    endPoint: 'https://muhammed-yilmaz.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-  //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
-  //       .subscribe({
-  //         next: (response) => {
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
 
-  //           ngForm.resetForm();
-  //         },
-  //         error: (error) => {
-  //           console.error(error);
-  //         },
-  //         complete: () => console.info('send post complete'),
-  //       });
-  //   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+            ngForm.resetForm();
+            this.snackBar.open('E-Mail wurde erfolgreich gesendet.', 'Schließen', {
+              duration: 3000,
+            });
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    // } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-  //     ngForm.resetForm();
-  //   }
-  // }
-
+    //   ngForm.resetForm();
+    // }
+    }
+  }
 
 }

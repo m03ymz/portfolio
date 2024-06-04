@@ -31,6 +31,7 @@ section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 50px;
     }
 }
 
@@ -60,6 +61,8 @@ span {
     cursor: pointer;
     margin-top: 50px;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .main-button:hover {
@@ -77,10 +80,15 @@ span {
     margin-top: 50px;
     margin-left: 70px;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
 .main-button2:hover {
     background-color: #FA7902; 
+}
+
+.button-box {
+    margin-top: 50px;
 }
 
 .shadow {
@@ -90,6 +98,15 @@ span {
     top: -70px;
     z-index: 1;
 }
+
+@media screen and (max-width: 1350px) {
+    .project1-box {
+        justify-content: center;
+        margin-left: 0;
+        padding-right: 0;
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
     .project1-box {
@@ -102,6 +119,7 @@ span {
             align-items: center;
             text-align: center;
             margin-top: -80px;
+            margin-bottom: unset;
         }
     }
     .shadow {
@@ -130,6 +148,9 @@ span {
     .project1-box {
         >img {
             height: 300px;
+        }
+        >div {
+            margin-top: -60px;
         }
         >div span {
             width: 280px;

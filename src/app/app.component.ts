@@ -13,6 +13,7 @@ import { Project3Component } from './portfolio/project3/project3.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { OverlayComponent } from './overlay/overlay.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -32,7 +33,8 @@ import { OverlayComponent } from './overlay/overlay.component';
     Project2Component,
     Project3Component,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    MatSnackBarModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

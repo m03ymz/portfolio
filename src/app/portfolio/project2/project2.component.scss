@@ -29,6 +29,8 @@ section {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        text-align: end;
+        margin-bottom: 50px;
     }
 }
 
@@ -58,6 +60,8 @@ span {
     cursor: pointer;
     margin-top: 50px;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .main-button:hover {
@@ -75,11 +79,25 @@ span {
     margin-top: 50px;
     margin-left: 70px;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
 .main-button2:hover {
     background-color: #FA7902; 
 }
+
+.button-box {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 1350px) {
+    .project1-box {
+        justify-content: center;
+        padding-left: 0;
+        margin-right: 0;
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
     .project1-box {
@@ -92,6 +110,7 @@ span {
             align-items: center;
             text-align: center;
             margin-top: -80px;
+            margin-bottom: unset;
         }
     }
 }
@@ -114,6 +133,9 @@ span {
     .project1-box {
         >img {
             height: 300px;
+        }
+        >div {
+            margin-top: -60px;
         }
         >div span {
             width: 280px;
