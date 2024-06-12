@@ -25,4 +25,14 @@ translate = inject(TranslationService);
     this.toggleMenuEvent.emit();
   }
 
+  handleLinkClick(event: MouseEvent) {
+    const link = event.target as HTMLElement; // Erfasse den angeklickten Link
+    if (link) {
+      link.classList.add('clicked'); // Füge dem angeklickten Link die Klasse 'clicked' hinzu
+      setTimeout(() => {
+        link.classList.remove('clicked'); // Entferne die Klasse 'clicked' nach 1 Sekunde
+      }, 1000);
+    }
+  }
+
 }

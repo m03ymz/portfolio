@@ -35,4 +35,8 @@
         <!-- <div *ngIf="!privacyPolicyAccepted && submitClicked" class="privacy-policy-error">Please accept the privacy policy.</div> -->
         <input type="submit" id="submitButton" value="send message :)" [disabled]="submitButtonDisabled" (click)="onSubmitClick()">
     </form>
+    <img (mouseenter)="showUpButton2()" class="up-button" src="../../assets/img/up-button.png" alt="">
+    <img (mouseleave)="hideUpButton2()" (click)="scrollToTop()" *ngIf="showUpButton2Flag" class="up-button2" src="../../assets/img/up-button2.png" alt="">
+
+
 </section>

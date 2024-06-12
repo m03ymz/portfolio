@@ -96,4 +96,18 @@ export class ContactComponent {
     }
   }
 
+  showUpButton2Flag: boolean = false;
+
+  showUpButton2() {
+    this.showUpButton2Flag = true;
+  }
+
+  hideUpButton2() {
+    this.showUpButton2Flag = false;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 }

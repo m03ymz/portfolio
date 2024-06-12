@@ -1,13 +1,13 @@
 <header>
     <img class="logo" src="../../assets/img/my-logo.png" alt="" (click)="reloadPage()">
     <div class="menu">
-        <a href="#about-me">About me</a>
-        <a href="#my-skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-    </div>
-    <div class="language">
-        <p  (click)="translate.switchLanguage('en')">EN</p>
-        <p  (click)="translate.switchLanguage('de')">DE</p>
+        <a (click)="handleLinkClick($event)" href="#about-me" class="link">About me</a>
+        <a (click)="handleLinkClick($event)" href="#my-skills" class="link">Skills</a>
+        <a (click)="handleLinkClick($event)" href="#portfolio" class="link">Portfolio</a>
+        <div class="language">
+            <p (click)="translate.switchLanguage('en')">EN</p>
+            <p (click)="translate.switchLanguage('de')">DE</p>
+        </div>
     </div>
     <img (click)="toggleMenu()" *ngIf="!isMenuOpen" class="burger-menu" src="../../assets/img/burger-menu.png" alt="">
     <img (click)="toggleMenu()" *ngIf="isMenuOpen" class="close-button" src="../../assets/img/close.png" alt="">

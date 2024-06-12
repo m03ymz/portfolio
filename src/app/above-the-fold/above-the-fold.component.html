@@ -1,6 +1,6 @@
 <section>
     <img class="shadow" src="../../assets/img/shadow1.png" alt="">
-    <img class="portfolio-img" src="../../assets/img/portfolio-img1111111.png" alt="">
+    <img class="portfolio-img" src="../../assets/img/portfolio-img111111111.png" alt="">
     <div class="full-box">
         <div class="main-info">
             <span class="i-am-text">{{'me' | translate}}</span>
@@ -12,6 +12,8 @@
         <!-- <button class="main-button">Let's talk!</button> -->
         <a class="main-button" href="#contact">Let's talk!</a>
     </div>
+    <img (mouseenter)="showUpButton2()" class="up-button" src="../../assets/img/up-button.png" alt="">
+    <img (mouseleave)="hideUpButton2()" (click)="scrollToBottom()" *ngIf="showUpButton2Flag" class="up-button2" src="../../assets/img/up-button2.png" alt="">
 </section>
 
 

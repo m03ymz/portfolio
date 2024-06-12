@@ -229,6 +229,15 @@ input:focus::placeholder, textarea:focus::placeholder {
     cursor: pointer;
 }
 
+.up-button, .up-button2 {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1500px) {
     section {
         flex-direction: column;

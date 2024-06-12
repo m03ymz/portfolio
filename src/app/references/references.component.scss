@@ -66,6 +66,7 @@ section {
     .references-box {
         // padding-top: 175px;
         z-index: 9999999;
+        margin-top: -45px;
     }
 }
 
@@ -82,11 +83,17 @@ section {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 675px) {
     .references-box {
         >span {
             display: none;
         }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .references-box {
+        margin-top: -110px;
     }
 }
 

@@ -95,6 +95,16 @@ section {
     margin-top: -30px;
 }
 
+.up-button, .up-button2 {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    cursor: pointer;
+    transform: rotate(180deg); /* Drehung um 180 Grad */
+}
+
 @media screen and (max-width: 1500px) {
     section {
         display: flex;
@@ -108,7 +118,7 @@ section {
         z-index: 999999;
         margin-top: 100px;
         position: relative;
-        top: -240px;
+        top: -220px;
         padding-top: unset;
         margin-bottom: unset;
     }
@@ -144,11 +154,11 @@ section {
 
 @media screen and (max-width: 850px) {
     .name {
-        font-size: 54px;
+        font-size: 58px;
         // height: 69px;
     }
     .title {
-        font-size: 22px;
+        font-size: 26px;
     }
     .i-am-text {
         font-size: 44px;
@@ -160,21 +170,24 @@ section {
     }
     .full-box {
         margin-top: -100px;
-        top: -275px;
+        top: -270px;
     }
 }
 
 @media screen and (max-width: 650px) {
+    .full-box {
+        top: -265px;
+    }
     .name {
-        font-size: 44px;
+        font-size: 48px;
         // height: 59px;
     }
     .title {
-        font-size: 20px;
+        font-size: 24px;
     }
     .i-am-text {
-        font-size: 36px;
-        width: 46px;
+        font-size: 40px;
+        width: 38px;
     }
     .main-button {
         padding: 8px 16px;
@@ -182,11 +195,14 @@ section {
     .shadow {
         height: 500px;
         margin-top: -400px;
-        width: 450px;
+        width: 505px;
     }
 }
 
 @media screen and (max-width: 525px) {
+    section {
+        margin-top: 160px;
+    }
     .name {
         font-size: 38px;
         // height: 53px;
@@ -202,59 +218,74 @@ section {
         width: 395px;
         margin-left: 40px;
     }
+    .portfolio-img {
+        height: 65%;
+    }
+    .full-box {
+        top: -245px;
+    }
 }
 
 @media screen and (max-width: 450px) {
     .name {
-        font-size: 32px;
+        font-size: 36px;
         // height: 47px;
     }
     .title {
-        font-size: 20px;
+        font-size: 24px;
     }
     .i-am-text {
-        font-size: 30px;
+        font-size: 34px;
         width: 40px;
     }
     .portfolio-img {
-        height: 70%;
+        height: 60%;
         margin-bottom: 370px;
     }
     .shadow {
-        width: 345px;
+        width: 344px;
         margin-left: 40px;
     }
 }
 
 @media screen and (max-width: 400px) {
+    section {
+        margin-top: 125px;
+    }
     .name {
-        font-size: 28px;
+        font-size: 32px;
         // height: 39px;
     }
     .title {
-        font-size: 20px;
+        font-size: 22px;
     }
     .i-am-text {
-        font-size: 26px;
+        font-size: 30px;
         width: 34px;
     }
     .main-button {
         padding: 6px 12px;
     }
     .portfolio-img {
-        height: 65%;
-        margin-bottom: 400px;
+        height: 54%;
+        margin-bottom: 320px;
     }
     .shadow {
         width: 315px;
         margin-left: 0px;
     }
+    .full-box {
+        top: -200px;
+    }
 }
 
 @media screen and (max-width: 350px) {
+    section {
+        margin-top: 70px;
+    }
     .portfolio-img {
-        height: 60%;
-        margin-bottom: 425px;
+        height: 49%;
+        margin-bottom: 280px;
     }
     .name {
         font-size: 26px;
@@ -269,5 +300,8 @@ section {
     }
     .shadow {
         width: 290px;
+    }
+    .full-box {
+        top: -160px;
     }
 }
