@@ -18,5 +18,4 @@ wasMenuOpen: any;
     this.closeOverlay.emit();
   }
 
-
 }

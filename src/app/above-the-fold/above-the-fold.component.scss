@@ -105,38 +105,53 @@ section {
     transform: rotate(180deg); /* Drehung um 180 Grad */
 }
 
+.curved-vector {
+    height: 450px;
+    width: 100%;
+    z-index: 99;
+    // margin-top: -200px;
+    position: absolute;
+    bottom: 0;
+}
+
 @media screen and (max-width: 1500px) {
     section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 220px;
+        margin-top: 165px;
         justify-content: center;
     }
     .full-box {
         // position: unset;
         z-index: 999999;
-        margin-top: 100px;
+        // margin-top: 100px;
         position: relative;
-        top: -220px;
-        padding-top: unset;
+        top: -115px;
+        // padding-top: unset;
         margin-bottom: unset;
     }
     .i-am-text {
         width: 72px;
         margin-right: 0;
     }
-    .portfolio-img {
-        margin-top: 20px;
-    }
+    // .portfolio-img {
+    //     margin-top: 20px;
+    // }
     .shadow {
         margin-left: 0;
         margin-top: -300px;
         width: 550px;
     }
+    .curved-vector {
+        bottom: 80px;
+    }
 }
 
 @media screen and (max-width: 1050px) {
+    section {
+        margin-top: 140px;
+    }
     .name {
         font-size: 72px;
         // height: 87px;
@@ -144,12 +159,15 @@ section {
     .title {
         font-size: 40px;
     }
-    .portfolio-img {
-        margin-bottom: 50px;
+    .curved-vector {
+        bottom: 60px;
     }
-    .full-box {
-        top: -250px;
-    }
+//     // .portfolio-img {
+//     //     margin-bottom: 50px;
+//     // }
+//     .full-box {
+//         top: -185px;
+//     }
 }
 
 @media screen and (max-width: 850px) {
@@ -164,19 +182,24 @@ section {
         font-size: 44px;
         width: 48px;
     }
-    .portfolio-img {
-        // margin-bottom: 254px;
-        margin-bottom: 300px;
-    }
+    // .portfolio-img {
+    //     // margin-bottom: 254px;
+    //     margin-bottom: 300px;
+    // }
     .full-box {
-        margin-top: -100px;
-        top: -270px;
+        top: -140px;
+    }
+    .curved-vector {
+        bottom: 80px;
     }
 }
 
 @media screen and (max-width: 650px) {
+    section {
+        margin-top: 70px;
+    }
     .full-box {
-        top: -265px;
+        top: -50px;
     }
     .name {
         font-size: 48px;
@@ -197,11 +220,17 @@ section {
         margin-top: -400px;
         width: 505px;
     }
+    .curved-vector {
+        bottom: 20px;
+    }
+    .portfolio-img {
+        height: 70%;
+    }
 }
 
 @media screen and (max-width: 525px) {
     section {
-        margin-top: 160px;
+        margin-top: 70px;
     }
     .name {
         font-size: 38px;
@@ -214,19 +243,25 @@ section {
         font-size: 32px;
         width: 44px;
     }
-    .shadow {
-        width: 395px;
-        margin-left: 40px;
-    }
+    // .shadow {
+    //     width: 395px;
+    //     margin-left: 40px;
+    // }
     .portfolio-img {
-        height: 65%;
+        height: 68%;
     }
     .full-box {
-        top: -245px;
+        top: -70px;
+    }
+    .curved-vector {
+        bottom: 40px;
     }
 }
 
 @media screen and (max-width: 450px) {
+    section {
+        margin-top: 20px;
+    }
     .name {
         font-size: 36px;
         // height: 47px;
@@ -240,17 +275,22 @@ section {
     }
     .portfolio-img {
         height: 60%;
-        margin-bottom: 370px;
     }
     .shadow {
         width: 344px;
         margin-left: 40px;
     }
+    .full-box {
+        top: -45px;
+    }
+    .curved-vector {
+        bottom: 70px;
+    }
 }
 
 @media screen and (max-width: 400px) {
     section {
-        margin-top: 125px;
+        margin-top: -15px;
     }
     .name {
         font-size: 32px;
@@ -267,25 +307,23 @@ section {
         padding: 6px 12px;
     }
     .portfolio-img {
-        height: 54%;
-        margin-bottom: 320px;
+        height: 52%;
     }
     .shadow {
         width: 315px;
         margin-left: 0px;
     }
     .full-box {
-        top: -200px;
+        top: -25px;
     }
 }
 
 @media screen and (max-width: 350px) {
     section {
-        margin-top: 70px;
+        margin-top: -50px;
     }
     .portfolio-img {
-        height: 49%;
-        margin-bottom: 280px;
+        height: 48%;
     }
     .name {
         font-size: 26px;
@@ -302,6 +340,195 @@ section {
         width: 290px;
     }
     .full-box {
-        top: -160px;
+        top: 0;
+    }
+}
+
+@media screen and (max-height: 750px) and (max-width: 400px) {
+    section {
+        margin-top: 82px;
+    }
+    .curved-vector {
+        bottom: 0;
+    }
+    .full-box {
+        top: -55px;
+    }
+    .portfolio-img {
+        height: 64%;
+    }
+}
+
+@media screen and (min-height: 843px) and (max-height: 845px) and (min-width: 389px) and (max-width: 391px) {
+    section {
+        margin-top: 0px;
+    }
+    .curved-vector {
+        bottom: 45px;
+    }
+    .full-box {
+        top: -10px;
+    }
+}
+
+@media screen and (min-height: 1366px) and (max-height: 1366px) and (min-width: 1024px) and (max-width: 1024px) {
+    .full-box {
+        top: -130px;
+    }
+}
+
+@media screen and (min-height: 1368px) and (max-height: 1368px) and (min-width: 912px) and (max-width: 912px) {
+    .full-box {
+        top: -130px;
+    }
+}
+
+@media screen and (min-height: 720px) and (max-height: 720px) and (min-width: 540px) and (max-width: 540px) {
+    section {
+        margin-top: 130px;
+    }
+    .full-box {
+        top: -150px;
+    }
+    .curved-vector {
+        bottom: 54px;
+    }
+}
+
+@media screen and (min-height: 882px) and (max-height: 882px) and (min-width: 344px) and (max-width: 344px) {
+    section {
+        margin-top: -35px;
+    }
+    .full-box {
+        top: 0;
+    }
+    .curved-vector {
+        bottom: 54px;
+    }
+}
+
+@media screen and (min-height: 600px) and (max-height: 600px) and (min-width: 1024px) and (max-width: 1024px) {
+    section {
+        margin-top: 165px;
+    }
+    .full-box {
+        top: -125px;
+    }
+    .curved-vector {
+        bottom: 45px;
+    }
+}
+
+@media screen and (min-height: 800px) and (max-height: 800px) and (min-width: 1280px) and (max-width: 1280px) {
+    section {
+        margin-top: 165px;
+    }
+    .full-box {
+        top: -145px;
+    }
+    .curved-vector {
+        bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 400px) and (max-height: 730px)  {
+    section {
+        margin-top: 82px;
+    }
+    // .portfolio-img {
+    //     height: 60%;
+    // }
+    .full-box {
+        top: -50px;
+    }
+    .curved-vector {
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 450px) and (max-height: 730px)  {
+    section {
+        margin-top: 55px;
+    }
+    // .portfolio-img {
+    //     height: 60%;
+    // }
+    .full-box {
+        top: -20px;
+    }
+    .curved-vector {
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 525px) and (max-height: 730px)  {
+    section {
+        margin-top: 85px;
+    }
+    // .portfolio-img {
+    //     height: 60%;
+    // }
+    .full-box {
+        top: -60px;
+    }
+    .curved-vector {
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 526px) and (max-width: 650px) and (max-height: 730px)  {
+    section {
+        margin-top: 100px;
+    }
+    // .portfolio-img {
+    //     height: 60%;
+    // }
+    .full-box {
+        top: -90px;
+    }
+    .curved-vector {
+        bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 651px) and (max-width: 850px) and (max-height: 730px)  {
+    section {
+        margin-top: 140px;
+    }
+    // .portfolio-img {
+    //     height: 60%;
+    // }
+    .full-box {
+        top: -75px;
+    }
+    .curved-vector {
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1050px) and (max-height: 730px)  {
+    section {
+        margin-top: 160px;
+    }
+    // .portfolio-img {
+    //     height: 60%;
+    // }
+    .full-box {
+        top: -105px;
+    }
+    .curved-vector {
+        bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1500px) and (max-height: 730px)  {
+    section {
+        margin-top: 170px;
+    }
+    .full-box {
+        top: -125px;
+    }
+    .curved-vector {
+        bottom: 60px;
     }
 }

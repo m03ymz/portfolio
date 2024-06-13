@@ -53,6 +53,7 @@ section {
         align-items: center;
         justify-content: flex-end;
         width: 100%;
+        gap: 35px;
     }
     >div h1 {
         font-size: 90px;
@@ -146,14 +147,24 @@ section {
     .shadow {
         left: -350px;
     }
+    .my-skills {
+        >div {
+            gap: 25px;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
     .skill-icons {
-        gap: 80px;
+        gap: 82px;
         >div {
             height: 60px;
             width: 60px;
+        }
+    }
+    .my-skills {
+        >div {
+            gap: 5px;
         }
     }
 }

@@ -1,4 +1,11 @@
 {
+    "header": "About me",
     "me": "I am",
-    "developer": "FRONTEND DEVELOPER"
+    "developer": "FRONTEND DEVELOPER",
+    "about-me": "About me",
+    "about-me1": "Hey, I'm Muhammed. I'm a frontend developer from Hamburg, Germany. Welcome to my portfolio, which I have programmed using Angular. I love programming, and it brings me immense joy. I am eager to convince you of my skills.",
+    "about-me2": "My expertise with the most relevant tech stack for front-end development makes me a proficient developer. With experience and enthusiasm, I am equipped to handle challenging projects.",
+    "about-me3": "I have completed an intensive full-time course, where I learned a great deal through numerous hands-on projects. You can find these projects showcased here on my portfolio.",
+    "my-skills": "My skills", 
+    "my-skills1": "Through continuous learning, I have enhanced my front-end development skills, resulting in the creation of several practical projects."
 }

@@ -14,20 +14,18 @@ export class AboveTheFoldComponent {
 
   translate = inject(TranslationService);
 
-  showUpButton2Flag: boolean = false;
+  // showUpButton2Flag: boolean = false;
 
-  constructor() { }
+  // showUpButton2() {
+  //   this.showUpButton2Flag = true;
+  // }
 
-  showUpButton2() {
-    this.showUpButton2Flag = true;
-  }
+  // hideUpButton2() {
+  //   this.showUpButton2Flag = false;
+  // }
 
-  hideUpButton2() {
-    this.showUpButton2Flag = false;
-  }
-
-  scrollToBottom() {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); // Nach unten scrollen
-  }
-
+  // scrollToBottom() {
+  //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); // Nach unten scrollen
+  // }
+  
 }

@@ -38,3 +38,71 @@ a {
 a:hover {
   color: #FA7902;
 }
+
+// .link {
+//   position: relative;
+// }
+
+// .link::after {
+//   content: '';
+//   position: absolute;
+//   width: 100%;
+//   transform: scaleX(0);
+//   height: 2px;
+//   bottom: 0;
+//   left: 0;
+//   background-color: rgb(255,71,71);
+//   transform-origin: bottom right;
+//   transition: transform 0.25s ease-out;
+// }
+
+// .link:hover::after {
+//   transform: scaleX(1);
+//   transform-origin: bottom left;
+// }
+
+.link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* Platz für den Strich unter dem Text */
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: rgb(255, 71, 71);
+  transition: width 0.3s ease-out;
+  transform: translateX(-50%);
+}
+
+.link:hover::after {
+  width: calc(100% - 2px); /* Breite auf 100% minus die Dicke des Strichs */
+}
+
+// .link::after {
+//   content: '';
+//   position: absolute;
+//   width: 0;
+//   height: 2px;
+//   bottom: 0;
+//   left: 50%;
+//   background: linear-gradient(to right, #E86F00 50%, rgb(255, 71, 71) 50%);
+//   background-size: 200% 100%; /* Doppelte Breite für den Übergang */
+//   transition: width 0.3s ease-out, background-position 0.3s ease-out;
+//   transform: translateX(-50%);
+// }
+
+// .link:hover::after {
+//   width: calc(100% - 2px);
+//   background-position: -100% 0; /* Umkehrung des Farbverlaufs */
+// }
+
+
+
+
+
+

@@ -6,15 +6,15 @@ section {
     margin-top: -220px;
 }
 
-.curved-vector {
-    height: 500px;
-    // height: 410px;
-    width: 100%;
-    margin-bottom: 500px;
-    position: relative;
-    z-index: 99;
-    margin-top: -200px;
-}
+// .curved-vector {
+//     height: 500px;
+//     // height: 410px;
+//     width: 100%;
+//     margin-bottom: 500px;
+//     position: relative;
+//     z-index: 99;
+//     margin-top: -200px;
+// }
 
 .references-img {
         height: 30px;
@@ -34,7 +34,7 @@ section {
     gap: 32px;
     position: absolute;
     z-index: 100;
-    margin-top: 5px;
+    margin-top: -20px;
     >span {
         color: white;
         font-size: 23px;
@@ -51,9 +51,23 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 5px;
     margin-bottom: 50px;
+    animation: upAndDown 2s infinite;
 }
+
+@keyframes upAndDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 @media screen and (max-width: 1500px) {
     section {
@@ -67,6 +81,12 @@ section {
         // padding-top: 175px;
         z-index: 9999999;
         margin-top: -45px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .scroll-down-img {
+        top: -135px;
     }
 }
 
@@ -91,9 +111,9 @@ section {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 525px) {
     .references-box {
-        margin-top: -110px;
+        margin-top: -55px;
     }
 }
 
@@ -101,4 +121,34 @@ section {
     .curved-vector {
         height: 410px;
     }
+}
+
+@media screen and (max-height: 850px) and (max-width: 400px) {
+    .references-box {
+        margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 650px) and (max-height: 730px)  {
+    .references-box {
+        margin-top: 10px;
+    }  
+}
+
+@media screen and (min-width: 651px) and (max-width: 850px) and (max-height: 730px)  {
+    .references-box {
+        margin-top: 10px;
+    }  
+}
+
+@media screen and (min-width: 851px) and (max-width: 1050px) and (max-height: 730px)  {
+    .references-box {
+        margin-top: 10px;
+    }  
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1500px) and (max-height: 730px)  {
+    .references-box {
+        margin-top: 10px;
+    }  
 }
