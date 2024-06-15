@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     // height: calc(100% - 114px);
-    background-color: rgba(0, 0, 0, 0.9); /* Dunkler, transparenter Hintergrund */
+    background-color: rgba(0, 0, 0, 0.5); /* Dunkler, transparenter Hintergrund */
     animation: slideIn 0.5s forwards; /* Animation beim Einblenden */
     z-index: 999999999999999999999999; /* Über alle anderen Elemente legen */
     display: none;
@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: flex-start; /* Zentriere oben */
     padding-top: 100px; /* Ein bisschen Platz oben */
+    backdrop-filter: blur(5px);
 }
 
 .overlay.active {

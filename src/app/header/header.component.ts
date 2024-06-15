@@ -13,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class HeaderComponent {
 
 translate = inject(TranslationService);
+selectedLanguage: string = 'en';
 
   reloadPage() {
     window.location.reload();
@@ -23,6 +24,11 @@ translate = inject(TranslationService);
 
   toggleMenu() {
     this.toggleMenuEvent.emit();
+  }
+
+  switchLanguage(language: string) {
+    this.selectedLanguage = language;
+    this.translate.switchLanguage(language); // Aufrufen der Übersetzungsmethode
   }
 
   handleLinkClick(event: MouseEvent) {

@@ -25,10 +25,11 @@ header {
 }
 
 .menu {
-    width: 360px;
+    // width: 360px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 70px;
 }
 
 .logo {
@@ -39,6 +40,7 @@ header {
 a {
     text-decoration: none;
     color: white;
+    white-space: nowrap;
 }
 
 a:hover {
@@ -55,10 +57,29 @@ a:hover {
 
 .language {
     display: flex;
-    flex-direction: column;
-    >p {
-        cursor: pointer;
-    }
+    justify-content: center;
+    align-items: center;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.language-switcher:hover span {
+    color: #FA7902;
+}
+
+.language-switcher img {
+    height: 40px;
+    border-radius: 50%; /* Diese Zeile fügt die abgerundeten Ecken hinzu */
+    border: 3px solid transparent; /* Transparenter Rahmen, um Größenänderungen zu verhindern */
+}
+
+.language-switcher:hover img {
+    border: 3px solid #FA7902; /* Hier können Sie die Farbe und Dicke des Rahmens anpassen */
 }
 
 .link {

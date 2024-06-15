@@ -5,8 +5,18 @@
         <a (click)="handleLinkClick($event)" href="#my-skills" class="link">Skills</a>
         <a (click)="handleLinkClick($event)" href="#portfolio" class="link">Portfolio</a>
         <div class="language">
-            <p (click)="translate.switchLanguage('en')">EN</p>
-            <p (click)="translate.switchLanguage('de')">DE</p>
+            <!-- <p (click)="translate.switchLanguage('en')">EN</p>
+            <p (click)="translate.switchLanguage('de')">DE</p> -->
+            <!-- <img *ngIf="selectedLanguage === 'en'" (click)="switchLanguage('de')" src="../../assets/img/english.png" alt="English">
+            <img *ngIf="selectedLanguage === 'de'" (click)="switchLanguage('en')" src="../../assets/img/german.png" alt="German"> -->
+            <div class="language-switcher" *ngIf="selectedLanguage === 'en'" (click)="switchLanguage('de')">
+                <span>EN</span>
+                <img src="../../assets/img/english.png" alt="English">
+            </div>
+            <div class="language-switcher" *ngIf="selectedLanguage === 'de'" (click)="switchLanguage('en')">
+                <span>DE</span>
+                <img src="../../assets/img/german.png" alt="German">
+            </div>
         </div>
     </div>
     <img (click)="toggleMenu()" *ngIf="!isMenuOpen" class="burger-menu" src="../../assets/img/burger-menu.png" alt="">
