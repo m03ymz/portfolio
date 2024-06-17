@@ -106,10 +106,10 @@ a:hover {
     transform: scaleX(1); /* Set width to 100% after click */
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     header {
         padding: 37px 25px 37px 25px;
-        >div {
+        >div a {
             display: none;
         }
     }
