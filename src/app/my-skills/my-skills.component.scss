@@ -6,13 +6,12 @@ section {
     display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
 .skill-icons {
     width: 580px;
-    // height: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
