@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { OverlayComponent } from './overlay/overlay.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import AOS from 'aos';
 
 
 @Component({
@@ -39,7 +40,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   title = 'portfolio';
 
@@ -47,6 +48,10 @@ export class AppComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  ngOnInit() {
+    AOS.init();
   }
 
   // closeMenu() {

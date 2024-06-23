@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { TranslationService } from '../translation.service.component';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 @Component({
@@ -11,8 +13,19 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit {
 
   translate = inject(TranslationService);
+
+  ngOnInit(): void {
+    AOS.init({
+        duration: 1000,
+        easing: 'ease',
+        // once: true,
+        // offset: 200
+        // anchorPlacement: 'top-bottom', 
+        // startEvent: 'DOMContentLoaded' 
+    });
+}
   
 }
