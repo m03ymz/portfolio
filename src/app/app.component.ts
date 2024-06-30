@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { OverlayComponent } from './overlay/overlay.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import AOS from 'aos';
+import { MainContentComponent } from './main-content/main-content.component';
 
 
 @Component({
@@ -35,7 +36,8 @@ import AOS from 'aos';
     Project3Component,
     ContactComponent,
     FooterComponent,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MainContentComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -66,6 +66,28 @@ footer {
     transform: scale(1.2); 
 }
 
+.link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; /* Platz für den Strich unter dem Text */
+  }
+  
+  .link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: rgb(255, 71, 71);
+    transition: width 0.3s ease-out;
+    transform: translateX(-50%);
+  }
+  
+  .link:hover::after {
+    width: calc(100% - 2px); /* Breite auf 100% minus die Dicke des Strichs */
+  }
+
 @media screen and (max-width: 900px) {
     footer {
         flex-direction: column;

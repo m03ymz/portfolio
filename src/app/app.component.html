@@ -1,13 +1,6 @@
 <app-header [isMenuOpen]="isMenuOpen" (toggleMenuEvent)="toggleMenu()"></app-header>
 <app-overlay [isMenuOpen]="isMenuOpen" (closeOverlay)="toggleMenu()"></app-overlay>
-<app-above-the-fold></app-above-the-fold>
-<app-references></app-references>
-<app-about-me id="about-me"></app-about-me>
-<app-my-skills id="my-skills"></app-my-skills>
-<app-project1 id="portfolio"></app-project1>
-<app-project2></app-project2>
-<app-project3></app-project3>
-<app-contact id="contact"></app-contact>
+<router-outlet />
 <app-footer></app-footer>
 
-<router-outlet />
+
