@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { TranslationService } from '../translation.service.component';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-my-skills',
@@ -10,8 +12,19 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
-export class MySkillsComponent {
+export class MySkillsComponent implements OnInit {
 
   translate = inject(TranslationService);
+
+  ngOnInit(): void {
+    AOS.init({
+        duration: 1000,
+        easing: 'ease',
+        // once: true,
+        // offset: 500
+        // anchorPlacement: 'top-bottom', 
+        // startEvent: 'DOMContentLoaded' 
+    });
+  }
   
 }

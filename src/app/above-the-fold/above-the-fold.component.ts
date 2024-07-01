@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { TranslationService } from '../translation.service.component';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-above-the-fold',
@@ -10,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
-export class AboveTheFoldComponent {
+export class AboveTheFoldComponent implements OnInit {
 
   translate = inject(TranslationService);
 
@@ -27,5 +29,13 @@ export class AboveTheFoldComponent {
   // scrollToBottom() {
   //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); // Nach unten scrollen
   // }
+
+  ngOnInit(): void {
+    AOS.init({
+        // duration: 5000,
+        // easing: 'ease-in-out',
+        // once: true,
+    });
+  }
   
 }

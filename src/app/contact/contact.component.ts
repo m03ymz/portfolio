@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +13,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
 
   http = inject(HttpClient)
   snackBar = inject(MatSnackBar);
@@ -108,6 +110,17 @@ export class ContactComponent {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  ngOnInit(): void {
+    AOS.init({
+        duration: 1000,
+        easing: 'ease',
+        // once: true,
+        // offset: 500
+        // anchorPlacement: 'top-bottom', 
+        // startEvent: 'DOMContentLoaded' 
+    });
   }
 
 }

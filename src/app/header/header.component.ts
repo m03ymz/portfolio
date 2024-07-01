@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, inject } from '@angular/core';
 import { TranslationService } from '../translation.service.component';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
 translate = inject(TranslationService);
 selectedLanguage: string = 'en';
@@ -41,4 +43,10 @@ selectedLanguage: string = 'en';
     }
   }
 
+  ngOnInit(): void {
+    AOS.init({
+        duration: 3000,
+        easing: 'ease'
+    });
+  }
 }

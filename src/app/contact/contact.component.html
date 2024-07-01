@@ -1,5 +1,5 @@
 <section>
-    <div class="contact-text">
+    <div class="contact-text" data-aos="fade-right" data-aos-offset="700">
         <div>
             <img src="../../assets/img/line-contact.png" alt="">
             <h4>Contact</h4>
@@ -7,7 +7,7 @@
         <p>Got a problem to solve?</p>
         <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work. <br><br> Need a Frontend developer? Contact me!</span>
     </div>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-formular">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-formular" data-aos="fade-up" data-aos-offset="800">
 
         <label for="name"></label>
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required (blur)="onBlur($event)" (ngModelChange)="validateForm()" [ngClass]="{'valid': name.valid && name.touched, 'invalid': !name.valid && name.touched}">
