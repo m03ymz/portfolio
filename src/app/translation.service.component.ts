@@ -5,6 +5,12 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class TranslationService {
+  get(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
+  use(language: string) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en'); 

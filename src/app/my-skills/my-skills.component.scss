@@ -43,7 +43,7 @@ section {
 }
 
 .my-skills {
-    width: 419px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +52,7 @@ section {
         align-items: center;
         justify-content: flex-end;
         width: 100%;
-        gap: 35px;
+        gap: 40px;
     }
     >div h1 {
         font-size: 90px;
@@ -60,6 +60,10 @@ section {
         margin-block-start: 0.3em;
         margin-block-end: 0.3em;
         white-space: nowrap;
+    }
+    >span {
+        padding-right: 100px;
+        text-align: end;
     }
 }
 
@@ -77,6 +81,7 @@ section {
     font-family: 'Poppins', sans-serif;
     transition: all 0.1s ease;
     text-decoration: none;
+    margin-right: 60px;
 }
 
 .main-button:hover {
@@ -130,12 +135,6 @@ section {
     .main-button2 {
         display: unset;
     }
-    .my-skills {
-        >span {
-            padding-right: 28px;
-            padding-left: 28px;
-        }
-    }
 }
 
 @media screen and (max-width: 650px) {
@@ -146,11 +145,11 @@ section {
     .shadow {
         left: -350px;
     }
-    .my-skills {
-        >div {
-            gap: 25px;
-        }
-    }
+    // .my-skills {
+    //     >div {
+    //         gap: 25px;
+    //     }
+    // }
 }
 
 @media screen and (max-width: 500px) {
@@ -165,11 +164,15 @@ section {
         >div {
             gap: 5px;
         }
+        >span {
+            padding-right: 66px;
+        }
     }
 }
 
 @media screen and (max-width: 475px) {
     .my-skills {
+        width: 255px;
         >div h1 {
             font-size: 66px;
         }

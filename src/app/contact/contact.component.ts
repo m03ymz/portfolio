@@ -3,17 +3,21 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { TranslationService } from '../translation.service.component';
+import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, MatSnackBarModule],
+  imports: [FormsModule, CommonModule, MatSnackBarModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
+
+  translate = inject(TranslationService);
 
   http = inject(HttpClient)
   snackBar = inject(MatSnackBar);

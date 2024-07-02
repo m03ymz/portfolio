@@ -46,7 +46,8 @@ selectedLanguage: string = 'en';
   ngOnInit(): void {
     AOS.init({
         duration: 3000,
-        easing: 'ease'
+        easing: 'ease',
+        once: true
     });
   }
 }

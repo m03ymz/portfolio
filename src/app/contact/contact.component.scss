@@ -136,9 +136,10 @@ input[type=submit] {
 }
 
 form span {
-    color: red;
-    font-size: 14px;
-    font-weight: lighter;
+    color: #E61C40;
+    font-size: 15px;
+    // font-weight: lighter;
+    font-family: 'Poppins';
 }
 
 form div {
@@ -147,13 +148,13 @@ form div {
 
 .contact-formular input.valid, 
 .contact-formular textarea.valid {
-    border-color: #00ff00;
+    border-color: #70E61C;
     background-color: #141D2F;
 }
 
 .contact-formular input.invalid, 
 .contact-formular textarea.invalid {
-    border-color: red;
+    border-color: #E61C40;
     background-color: #141D2F;
 }
 
@@ -166,7 +167,7 @@ form div {
 
 .contact-formular input.valid:focus,
 .contact-formular textarea.valid:focus {
-    border-color: #00ff00;
+    border-color: #70E61C;
 }
 
 input.valid, textarea.valid {
@@ -198,6 +199,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     cursor: pointer;
     line-height: 20px; /* Gleich der Höhe des benutzerdefinierten Kontrollkästchens */
     margin-top: 15px;
+    width: 682px;
 }
 
 .custom-checkbox + label::before {
@@ -260,7 +262,7 @@ input:focus::placeholder, textarea:focus::placeholder {
         width: 80%;
     }
     .custom-checkbox + label {
-        width: 70%;
+        width: 78%;
     }
 }
 
