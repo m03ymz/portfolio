@@ -29,7 +29,7 @@
         }
 
         <input type="checkbox" id="privacyPolicyCheckbox" class="custom-checkbox" (change)="validateForm()">
-        <label for="privacyPolicyCheckbox">{{'contactform-span4' | translate}}</label>
+        <label for="privacyPolicyCheckbox" [innerHTML]="'contactform-span4' | translate"></label>
         <!-- <div *ngIf="!privacyPolicyAccepted && submitClicked" class="privacy-policy-error">Please accept the privacy policy.</div> -->
         <input type="submit" id="submitButton" [value]="'placeholder4' | translate" [disabled]="submitButtonDisabled" (click)="onSubmitClick()">
     </form>

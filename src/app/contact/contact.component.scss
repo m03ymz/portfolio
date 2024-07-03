@@ -196,10 +196,23 @@ input:focus::placeholder, textarea:focus::placeholder {
 .custom-checkbox + label {
     position: relative;
     padding-left: 30px; /* Platz für das benutzerdefinierte Kontrollkästchen */
-    cursor: pointer;
+    // cursor: pointer;
     line-height: 20px; /* Gleich der Höhe des benutzerdefinierten Kontrollkästchens */
     margin-top: 15px;
     width: 682px;
+}
+
+::ng-deep .custom-checkbox + label > .link {
+    color: #FF4747;
+    text-decoration: none;
+}
+
+::ng-deep .custom-checkbox + label > .link:hover {
+    text-decoration: underline; /* Unterstrich bei Hover */
+}
+
+::ng-deep .custom-checkbox + label:hover::before {
+    filter: brightness(2);
 }
 
 .custom-checkbox + label::before {
@@ -214,6 +227,8 @@ input:focus::placeholder, textarea:focus::placeholder {
     box-sizing: border-box; /* Berücksichtigt den Rand in der Größe */
     text-align: center; /* Zentriert den Inhalt horizontal */
     line-height: 20px; /* Gleich der Höhe des benutzerdefinierten Kontrollkästchens */
+    cursor: pointer;
+    transition: filter 0.3s ease;
 }
 
 /* Benutzerdefiniertes Aussehen des Häkchens, wenn das Kontrollkästchen aktiviert ist */
