@@ -1,5 +1,7 @@
-<header data-aos="flip-down">
-    <img class="logo" src="../../assets/img/my-logo.png" alt="" (click)="reloadPage()">
+<header>
+    <a [routerLink]="['/main-content']">
+        <img class="logo" src="../../assets/img/my-logo.png" alt="">
+    </a>
     <div class="menu">
         <a (click)="handleLinkClick($event)" href="#about-me" class="link">{{'header' | translate}}</a>
         <a (click)="handleLinkClick($event)" href="#my-skills" class="link">Skills</a>

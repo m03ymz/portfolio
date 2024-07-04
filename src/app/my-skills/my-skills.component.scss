@@ -62,7 +62,7 @@ section {
         white-space: nowrap;
     }
     >span {
-        padding-right: 100px;
+        padding-right: 102px;
         text-align: end;
     }
 }
@@ -141,6 +141,8 @@ section {
     .skill-icons {
         width: unset;
         gap: 80px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
     .shadow {
         left: -350px;
@@ -155,6 +157,8 @@ section {
 @media screen and (max-width: 500px) {
     .skill-icons {
         gap: 82px;
+        padding-left: unset;
+        padding-right: unset;
         >div {
             height: 60px;
             width: 60px;
@@ -172,12 +176,12 @@ section {
 
 @media screen and (max-width: 475px) {
     .my-skills {
-        width: 255px;
         >div h1 {
             font-size: 66px;
         }
         >span {
             font-size: 15px;
+            padding-left: 25px;
         }
     }
 }

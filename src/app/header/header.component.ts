@@ -4,11 +4,12 @@ import { TranslationService } from '../translation.service.component';
 import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -17,9 +18,9 @@ export class HeaderComponent implements OnInit {
 translate = inject(TranslationService);
 selectedLanguage: string = 'en';
 
-  reloadPage() {
-    window.location.reload();
-  }
+  // reloadPage() {
+  //   window.location.reload();
+  // }
 
   @Input() isMenuOpen: boolean | undefined;
   @Output() toggleMenuEvent = new EventEmitter<void>();

@@ -7,11 +7,12 @@ import { TranslationService } from '../translation.service.component';
 import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, MatSnackBarModule, TranslateModule],
+  imports: [FormsModule, CommonModule, MatSnackBarModule, TranslateModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

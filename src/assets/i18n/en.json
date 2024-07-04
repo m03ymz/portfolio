@@ -44,9 +44,10 @@
     "privacy-policy-h2-3": "3. Use of Information",
     "privacy-policy-p3": "I use your personal data exclusively to effectively process your inquiries and to provide you with the requested services. This includes direct communication about my projects and services to ensure that your needs are met as effectively as possible.",
     "privacy-policy-h2-4": "4. Types of Processed Data",
-    "privacy-policy-p4": "- Inventory data (e.g., names, addresses). - Contact details (e.g., email).",
+    "privacy-policy-p4-1": "Inventory data (e.g., names, addresses).",
+    "privacy-policy-p4-2": "Contact details (e.g., email).",
     "privacy-policy-h2-5": "5. Purposes of Processing",
-    "privacy-policy-p5": "- Answering inquiries and communicating with users.",
+    "privacy-policy-p5": "Answering inquiries and communicating with users.",
     "privacy-policy-h2-6": "6. Legal Basis for Processing",
     "privacy-policy-p6": "Article 6 (1) lit. b GDPR serves as the legal basis for processing operations to fulfill a contract or pre-contractual measures.",
     "privacy-policy-h2-7": "7. Security Measures",
@@ -65,7 +66,7 @@
     "privacy-policy-p13": "I reserve the right to amend this privacy policy to comply with changes in legal requirements or changes to my services. I will inform you about significant changes.",
     "privacy-policy-h2-14": "14. Contact",
     "privacy-policy-p14": "If you have any questions about the privacy policy, please feel free to contact me directly.",
-    "privacy-policy-copyright": "&copy; 2024 Muhammed Yilmaz. All rights reserved.",
+    "privacy-policy-copyright": "2024 Muhammed Yilmaz. All rights reserved.",
     "privacy-policy-span1": "Email: mail@muhammed-yilmaz.com",
     "privacy-policy-span2": "Website: www.muhammed-yilmaz.com"
 }
