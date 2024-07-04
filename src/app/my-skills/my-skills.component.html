@@ -47,7 +47,7 @@
     <div class="my-skills-box" data-aos="fade-up-left" data-aos-offset="500">
     <div class="my-skills">
         <div>
-            <h1>{{'my-skills' | translate}}</h1>
+            <h1 id="headline" [ngStyle]="{ 'font-size.px': getFontSize() }">{{'my-skills' | translate}}</h1>
             <img class="vector" src="../../assets/img/vector3.png" alt="">
         </div>
         <span>{{'my-skills1' | translate}}</span>

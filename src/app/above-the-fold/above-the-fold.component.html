@@ -5,7 +5,7 @@
     </div>
     <div class="full-box" data-aos="fade-left" data-aos-easing="ease-in-out-back">
         <div class="main-info">
-            <span class="i-am-text">{{'me' | translate}}</span>
+            <span class="i-am-text" id="me" [ngStyle]="{ 'font-size.px': getFontSize() }">{{'me' | translate}}</span>
             <div class="info-box">
                 <span class="name">Muhammed Yilmaz</span>
                 <span class="title">{{'developer' | translate}}</span>

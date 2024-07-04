@@ -5,6 +5,9 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class TranslationService {
+  instant(arg0: string): string {
+    throw new Error('Method not implemented.');
+  }
   get(arg0: string) {
     throw new Error('Method not implemented.');
   }
