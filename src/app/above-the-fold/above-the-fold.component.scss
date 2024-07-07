@@ -50,12 +50,14 @@ section {
     white-space: nowrap;
     font-size: 90px;
     font-weight: 700;
+    line-height: 1.2;
 }
 .title {
     font-size: 58px;
     font-weight: 400;
     color: #FF4747;
     white-space: nowrap;
+    line-height: 1.2;
 }
 
 .i-am-text {
@@ -64,8 +66,9 @@ section {
     writing-mode: vertical-lr;
     // font-size: 64px;
     font-weight: 400;
-    margin-right: 20px;
+    // margin-right: 20px;
     // margin-top: 10px;
+    line-height: 1.5;
 }
 
 .info-box {
@@ -132,7 +135,7 @@ section {
     }
     .i-am-text {
         font-size: 48px;
-        width: 48px;
+        // width: 48px;
     }
 }
 
@@ -220,10 +223,10 @@ section {
         width: 30px;
     }
     .name {
-        font-size: 36px;
+        font-size: 32px;
     }
     .title {
-        font-size: 24px;
+        font-size: 22px;
     }
     .curved-vector {
         // bottom: -90px;
@@ -250,10 +253,10 @@ section {
         width: 26px;
     }
     .name {
-        font-size: 30px;
+        font-size: 28px;
     }
     .title {
-        font-size: 22px;
+        font-size: 20px;
     }
     .curved-vector {
         height: 910px;

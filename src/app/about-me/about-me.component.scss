@@ -63,15 +63,15 @@ section {
 
 .ellipse {
     position: absolute;
-    right: 268px;
+    right: 269px;
     top: 125px;
     height: 450px; 
 }
 
 .portfolio-img {
     position: absolute;
-    right: 273.5px;
-    top: 131.5px;
+    right: 275.5px;
+    top: 129.5px;
     height: 442px;
     clip-path: circle(50%);
 }
@@ -89,33 +89,70 @@ section {
 }
 
 @media screen and (max-width: 1250px) {
-    section {
-        align-items: center;
-        padding-left: unset;
+    .ellipse {
+        right: 134.5px;
+        height: 350px;
+        top: 175px;
+    }
+    .vector {
+        height: 4px;
+        width: 134.5px;
+    }
+    .portfolio-img {
+        right: 139.5px;
+        height: 342px;
+        top: 180.5px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .vector {
+        height: 4px;
+        width: 100px;
+    }
+    .ellipse {
+        right: 100px;
+        height: 280px;
+        top: 210px;
+    }
+    .portfolio-img {
+        right: 105px;
+        height: 272px;
+        top: 215.5px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .vector {
+        display: none;
     }
     .ellipse {
         display: none;
     }
-    .vector {
+    .portfolio-img {
         display: none;
     }
-    .portfolio-img {
-        display: none
+    section {
+        align-items: center;
+        padding-left: unset;
     }
-    // .shadow {
-    //     right: 300px;
-    //     z-index: 2;
-    // }
+    .about-me-box {
+        width: unset;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-me-box {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 @media screen and (max-width: 550px) {
     section h1 {
         font-size: 70px;
-    }
-    .about-me-box {
-        >div {
-            font-size: 14px;
-        }
     }
 }
 
@@ -130,7 +167,8 @@ section {
         font-size: 54px;
     }
     .about-me-box {
-        width: 280px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
 

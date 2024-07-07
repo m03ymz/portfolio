@@ -52,7 +52,7 @@ section {
         align-items: center;
         justify-content: flex-end;
         width: 100%;
-        gap: 40px;
+        gap: 50px;
     }
     >div h1 {
         // font-size: 90px;
@@ -62,7 +62,7 @@ section {
         white-space: nowrap;
     }
     >span {
-        padding-right: 102px;
+        padding-right: 100px;
         text-align: end;
     }
 }
@@ -117,6 +117,11 @@ section {
     left: -250px;
 }
 
+.vector {
+    height: 4px;
+    width: 50px;
+}
+
 // .new-font {
 //     font-size: 20px !important;
 // }
@@ -141,6 +146,21 @@ section {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .vector {
+        height: 4px;
+        width: 50px;
+    }
+    .my-skills {
+        >div {
+            gap: 25px;
+        }
+        >span {
+            padding-right: 75px;
+        }
+    }
+}
+
 @media screen and (max-width: 650px) {
     .skill-icons {
         width: unset;
@@ -151,11 +171,21 @@ section {
     .shadow {
         left: -350px;
     }
-    // .my-skills {
-    //     >div {
-    //         gap: 25px;
-    //     }
-    // }
+}
+
+@media screen and (max-width: 600px) {
+    .vector {
+        height: 4px;
+        width: 30px;
+    }
+    .my-skills {
+        >div {
+            gap: 20px;
+        }
+        >span {
+            padding-right: 50px;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -168,14 +198,14 @@ section {
             width: 60px;
         }
     }
-    .my-skills {
-        >div {
-            gap: 5px;
-        }
-        >span {
-            padding-right: 66px;
-        }
-    }
+    // .my-skills {
+    //     >div {
+    //         gap: 5px;
+    //     }
+    //     >span {
+    //         padding-right: 66px;
+    //     }
+    // }
 }
 
 @media screen and (max-width: 475px) {
@@ -186,6 +216,21 @@ section {
         >span {
             font-size: 15px;
             padding-left: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .vector {
+        height: 4px;
+        width: 20px;
+    }
+    .my-skills {
+        >div {
+            gap: 5px;
+        }
+        >span {
+            padding-right: 25px;
         }
     }
 }
