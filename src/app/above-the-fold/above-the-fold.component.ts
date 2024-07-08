@@ -81,39 +81,39 @@ export class AboveTheFoldComponent implements OnInit {
       const textLength = headingElement.innerText.trim().length;
       if (window.innerWidth <= 400) {
         if (textLength > 5) {
+          return 15;
+        } else {
+          return 22;
+        }
+      } else if (window.innerWidth <= 525) {
+        if (textLength > 5) {
           return 16;
         } else {
           return 26;
         }
-      } else if (window.innerWidth <= 525) {
-        if (textLength > 5) {
-          return 18;
-        } else {
-          return 30;
-        }
       } else if (window.innerWidth <= 650) {
         if (textLength > 5) {
-          return 24;
+          return 20;
         } else {
-          return 32;
+          return 30;
         }
       } else if (window.innerWidth <= 1500) {
         if (textLength > 5) {
-          return 30;
+          return 28;
         } else {
-          return 46;
+          return 40;
         }
       } else if (window.innerWidth <= 1700) {
         if (textLength > 5) {
-          return 36;
+          return 32;
         } else {
-          return 54;
+          return 48;
         }
       } else {
         if (textLength > 5) {
-          return 48;
+          return 44;
         } else {
-          return 70;
+          return 66;
         }
       }
     }

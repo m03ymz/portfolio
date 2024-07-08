@@ -9,7 +9,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 15px;
     >h1 {
         font-size: 90px;
         font-weight: 700;
@@ -74,7 +74,7 @@ section {
 
 @media screen and (max-width: 900px) {
     .line-left {
-        width: 15px;
+        width: 60px;
         height: 4px;
     }
     .line-right {
@@ -82,8 +82,22 @@ section {
         height: 4px;
     }
     .imprint-content {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .imprint-header {
+        gap: 10px;
+    }
+    .line-left {
+        width: 40px;
+        height: 4px;
+    }
+    .imprint-content {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }
 
@@ -95,11 +109,19 @@ section {
     .imprint-header h1 {
         font-size: 54px;
     }
-    .imprint-content span.highlighted {
-        font-size: 16px;
+}
+
+@media screen and (max-width: 450px) {
+    .imprint-header {
+        gap: 5px;
+    }
+    .line-left {
+        width: 20px;
+        height: 4px;
     }
     .imprint-content {
-        font-size: 14px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 }
 

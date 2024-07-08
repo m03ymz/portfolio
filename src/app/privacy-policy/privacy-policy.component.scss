@@ -10,7 +10,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 15px;
     >h1 {
         font-size: 90px;
         font-weight: 700;
@@ -40,6 +40,7 @@ section {
 }
 
 .privacy-policy-content h2 {
+    font-size: 26px;
     color: #FA7902;
 }
 
@@ -49,14 +50,14 @@ section {
 
 @media screen and (max-width: 1280px) {
     .line-right {
-        width: 180px;
+        width: 160px;
         height: 4px;
     }
 }
 
 @media screen and (max-width: 900px) {
     .line-left {
-        width: 20px;
+        width: 60px;
         height: 4px;
     }
     .line-right {
@@ -64,8 +65,8 @@ section {
         height: 4px;
     }
     .privacy-policy-content {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 75px;
+        margin-right: 75px;
     }
     .privacy-policy-header h1 {
         font-size: 64px;
@@ -78,30 +79,42 @@ section {
         height: 4px;
     }
     .line-left {
+        width: 40px;
+        height: 4px;
+    }
+    .privacy-policy-content h2 {
+        font-size: 26px;
+    }
+    .privacy-policy-header {
+        gap: 10px;
+    }
+    .welcome-text {
+        font-size: 18px;
+    }
+    .privacy-policy-content {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .line-right {
         width: 25px;
         height: 4px;
     }
     .privacy-policy-header h1 {
-        font-size: 54px;
-    }
-    .privacy-policy-content h2 {
-        font-size: 18px;
-    }
-    .privacy-policy-content {
-        font-size: 14px;
-    }
-    .privacy-policy-header {
-        gap: 5px;
-    }
-    .welcome-text {
-        font-size: 16px;
+        font-size: 52px;
     }
 }
 
-@media screen and (max-width: 460px) {
-    .line-right {
-        width: 25px;
+@media screen and (max-width: 450px) {
+    .privacy-policy-header {
+        gap: 5px;
+    }
+    .line-left {
+        width: 20px;
         height: 4px;
+    }
+    .privacy-policy-content {
+        margin-left: 25px;
+        margin-right: 25px;
     }
     .privacy-policy-header h1 {
         font-size: 38px;
