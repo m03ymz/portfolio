@@ -55,9 +55,4 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     AOS.init();
   }
-
-  // closeMenu() {
-  //   this.isMenuOpen = false;
-  // }
-
 }
