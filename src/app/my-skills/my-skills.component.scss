@@ -55,7 +55,6 @@ section {
         gap: 50px;
     }
     >div h1 {
-        // font-size: 90px;
         font-weight: 700;
         margin-block-start: 0.3em;
         margin-block-end: 0.3em;
@@ -122,10 +121,6 @@ section {
     width: 50px;
 }
 
-// .new-font {
-//     font-size: 20px !important;
-// }
-
 @media screen and (max-width: 1200px) {
     section {
         flex-direction: column-reverse;
@@ -191,21 +186,11 @@ section {
 @media screen and (max-width: 500px) {
     .skill-icons {
         gap: 82px;
-        // padding-left: unset;
-        // padding-right: unset;
         >div {
             height: 60px;
             width: 60px;
         }
     }
-    // .my-skills {
-    //     >div {
-    //         gap: 5px;
-    //     }
-    //     >span {
-    //         padding-right: 66px;
-    //     }
-    // }
 }
 
 @media screen and (max-width: 475px) {

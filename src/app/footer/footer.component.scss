@@ -69,7 +69,7 @@ footer {
 .link {
     position: relative;
     display: inline-block;
-    padding-bottom: 5px; /* Platz für den Strich unter dem Text */
+    padding-bottom: 5px; 
   }
   
   .link::after {
@@ -85,7 +85,7 @@ footer {
   }
   
   .link:hover::after {
-    width: calc(100% - 2px); /* Breite auf 100% minus die Dicke des Strichs */
+    width: calc(100% - 2px); 
   }
 
 @media screen and (max-width: 900px) {

@@ -39,14 +39,14 @@ section {
 }
   
 .imprint-content span.highlighted {
-    color: #FA7902; /* Orange Farbe für die hervorgehobenen Wörter */
-    font-size: 18px; /* Größere Schriftgröße für die hervorgehobenen Wörter */
+    color: #FA7902; 
+    font-size: 18px; 
 }
 
 .link {
     position: relative;
     display: inline-block;
-    padding-bottom: 2px; /* Platz für den Strich unter dem Text */
+    padding-bottom: 2px; 
 }
   
 .link::after {
@@ -62,7 +62,7 @@ section {
 }
 
 .link:hover::after {
-    width: calc(100% - 2px); /* Breite auf 100% minus die Dicke des Strichs */
+    width: calc(100% - 2px); 
 }
 
 @media screen and (max-width: 1000px) {

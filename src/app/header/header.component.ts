@@ -18,10 +18,6 @@ export class HeaderComponent implements OnInit {
 translate = inject(TranslationService);
 selectedLanguage: string = 'en';
 
-  // reloadPage() {
-  //   window.location.reload();
-  // }
-
   @Input() isMenuOpen: boolean | undefined;
   @Output() toggleMenuEvent = new EventEmitter<void>();
 
@@ -31,15 +27,15 @@ selectedLanguage: string = 'en';
 
   switchLanguage(language: string) {
     this.selectedLanguage = language;
-    this.translate.switchLanguage(language); // Aufrufen der Übersetzungsmethode
+    this.translate.switchLanguage(language); 
   }
 
   handleLinkClick(event: MouseEvent) {
-    const link = event.target as HTMLElement; // Erfasse den angeklickten Link
+    const link = event.target as HTMLElement; 
     if (link) {
-      link.classList.add('clicked'); // Füge dem angeklickten Link die Klasse 'clicked' hinzu
+      link.classList.add('clicked'); 
       setTimeout(() => {
-        link.classList.remove('clicked'); // Entferne die Klasse 'clicked' nach 1 Sekunde
+        link.classList.remove('clicked'); 
       }, 1000);
     }
   }

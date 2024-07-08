@@ -25,7 +25,6 @@ export class OverlayComponent {
 
   switchLanguage(language: string) {
     this.selectedLanguage = language;
-    this.translate.switchLanguage(language); // Aufrufen der Übersetzungsmethode
+    this.translate.switchLanguage(language); 
   }
-
 }

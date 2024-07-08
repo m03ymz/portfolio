@@ -17,5 +17,4 @@ export class ReferencesComponent implements OnInit {
         duration: 2000,
     });
   }
-
 }

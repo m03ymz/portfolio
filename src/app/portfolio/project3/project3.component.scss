@@ -3,9 +3,7 @@ section {
     background-color: #141D2F;
     color: white;
     display: flex;
-    // justify-content: center;
     flex-direction: column;
-    // align-items: center;
     position: relative;
     // overflow: hidden;
     >p {
@@ -121,12 +119,6 @@ span {
             margin-bottom: unset;
         }
     }
-    // .shadow {
-    //     left: unset;
-    //     margin-left: 0;
-    //     height: 600px;
-    //     top: 15px;
-    // }
 }
 
 @media screen and (max-width: 550px) {

@@ -16,20 +16,6 @@ export class AboveTheFoldComponent implements OnInit {
 
   translate = inject(TranslationService);
 
-  // showUpButton2Flag: boolean = false;
-
-  // showUpButton2() {
-  //   this.showUpButton2Flag = true;
-  // }
-
-  // hideUpButton2() {
-  //   this.showUpButton2Flag = false;
-  // }
-
-  // scrollToBottom() {
-  //   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); // Nach unten scrollen
-  // }
-
   ngOnInit(): void {
     AOS.init({
         // duration: 5000,
@@ -37,43 +23,6 @@ export class AboveTheFoldComponent implements OnInit {
         // once: true,
     });
   }
-
-  // getFontSize(): number {
-  //   const headingElement = document.getElementById('me');
-  //   if (headingElement) {
-  //     const textLength = headingElement.innerText.trim().length;
-  //     if (window.innerWidth <= 400) {
-  //       if (textLength > 5) {
-  //         return 18; 
-  //       } else {
-  //         return 26; 
-  //       }
-  //     } else if (window.innerWidth <= 525) {
-  //       if (textLength > 5) {
-  //         return 20; 
-  //       } else {
-  //         return 32; 
-  //       }
-  //     } else if (window.innerWidth <= 650) {
-  //       if (textLength > 5) {
-  //         return 24; 
-  //       } else {
-  //         return 32; 
-  //       }
-  //     } else if (window.innerWidth <= 1500) {
-  //       if (textLength > 5) {
-  //         return 30; 
-  //       } else {
-  //         return 40; 
-  //       }
-  //     } else if (window.innerWidth <= 1700 && textLength > 5) {
-  //       return 32; 
-  //     } else {
-  //       return 48; 
-  //     }
-  //   }
-  //   return 64; 
-  // }
 
   getFontSize(): number {
     const headingElement = document.getElementById('me');
@@ -117,12 +66,11 @@ export class AboveTheFoldComponent implements OnInit {
         }
       }
     }
-    return 64; // Diese Zeile wird nur erreicht, wenn das headingElement nicht gefunden wird.
+    return 64; 
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    // Eventuell benötigte Logik bei Größenänderungen des Fensters
   }
   
 }

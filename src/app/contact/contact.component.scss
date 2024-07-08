@@ -55,7 +55,6 @@ section {
         border-radius: 10px;
         border-color: #FF4747;
         background-color: #141D2F !important;
-        // margin-bottom: 30px;
         color: white;
         padding-left: 10px;
         font-family: 'Poppins', sans-serif;
@@ -81,9 +80,6 @@ section {
     >textarea:hover {
         border-color: #E86F00;
     }
-    // >span {
-    //     margin-top: 10px;
-    // }
 }
 
 input::-webkit-input-placeholder {
@@ -144,7 +140,6 @@ input[type=submit] {
 form span {
     color: #E61C40;
     font-size: 15px;
-    // font-weight: lighter;
     font-family: 'Poppins';
 }
 
@@ -167,7 +162,7 @@ form div {
 .contact-formular input:focus, 
 .contact-formular textarea:focus {
     border-color: #E86F00;
-    outline: none; /* Entfernt den Standard-Fokusrahmen */
+    outline: none; 
     background-color: #141D2F;
 }
 
@@ -180,30 +175,29 @@ input.valid, textarea.valid {
     background-image: url(../../assets/img/valid.png);
     background-repeat: no-repeat;
     background-position: right 16px center;
-    background-size: 30px; /* Anpassung der Größe des Bildes */
+    background-size: 30px; 
 }
 
 input.invalid, textarea.invalid {
     background-image: url(../../assets/img/invalid.png);
     background-repeat: no-repeat;
     background-position: right 16px center;
-    background-size: 30px; /* Anpassung der Größe des Bildes */
+    background-size: 30px; 
 }
 
 input:focus::placeholder, textarea:focus::placeholder {
-    color: rgba(255, 255, 255, 0.5); /* Farbe des Placeholders bei Fokus */
-    opacity: 0.5;                    /* Opazität des Placeholders bei Fokus */
+    color: rgba(255, 255, 255, 0.5); 
+    opacity: 0.5;                    
 }
 
 .custom-checkbox {
-    display: none; /* Verstecke das standardmäßige Kontrollkästchen */
+    display: none; 
 }
 
 .custom-checkbox + label {
     position: relative;
-    padding-left: 30px; /* Platz für das benutzerdefinierte Kontrollkästchen */
-    // cursor: pointer;
-    line-height: 20px; /* Gleich der Höhe des benutzerdefinierten Kontrollkästchens */
+    padding-left: 30px; 
+    line-height: 20px; 
     margin-top: 15px;
     width: 682px;
 }
@@ -214,7 +208,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 ::ng-deep .custom-checkbox + label > .link:hover {
-    text-decoration: underline; /* Unterstrich bei Hover */
+    text-decoration: underline; 
 }
 
 ::ng-deep .custom-checkbox + label:hover::before {
@@ -227,27 +221,25 @@ input:focus::placeholder, textarea:focus::placeholder {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 22px; /* Breite des benutzerdefinierten Kontrollkästchens */
-    height: 22px; /* Höhe des benutzerdefinierten Kontrollkästchens */
-    border: 2px solid #E86F00; /* Randstil und Farbe */
-    box-sizing: border-box; /* Berücksichtigt den Rand in der Größe */
-    text-align: center; /* Zentriert den Inhalt horizontal */
-    line-height: 20px; /* Gleich der Höhe des benutzerdefinierten Kontrollkästchens */
+    width: 22px; 
+    height: 22px; 
+    border: 2px solid #E86F00; 
+    box-sizing: border-box; 
+    text-align: center; 
+    line-height: 20px; 
     cursor: pointer;
     transition: filter 0.3s ease;
 }
 
-/* Benutzerdefiniertes Aussehen des Häkchens, wenn das Kontrollkästchen aktiviert ist */
 .custom-checkbox:checked + label::before {
-    content: "\2714"; /* Unicode für ein Häkchen */
-    font-size: 16px; /* Größe des Häkchens */
-    color: #E86F00; /* Farbe des Häkchens */
+    content: "\2714"; 
+    font-size: 16px; 
+    color: #E86F00; 
 }
 
 #submitButton[disabled] {
-    background-color: #ccc; /* Hintergrundfarbe grau */
-    opacity: 0.5; /* Undurchsichtigkeit auf 50% setzen */
-    // cursor: not-allowed;
+    background-color: #ccc; 
+    opacity: 0.5; 
     cursor: pointer;
 }
 

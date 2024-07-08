@@ -63,7 +63,6 @@ export class ContactComponent implements OnInit {
 
   onSubmitClick() {
     this.submitClicked = true;
-    // console.log("Submit button clicked. submitClicked is now:", this.submitClicked);
     this.validateForm();
   }
 

@@ -32,27 +32,26 @@ export class MySkillsComponent implements OnInit {
     if (headingElement) {
       const textLength = headingElement.innerText.trim().length;
       if (window.innerWidth <= 400 && textLength <= 9) {
-        return 54; // Schriftgröße 54px für Bildschirmbreiten bis 400px und Textlänge 9 oder weniger
+        return 54; 
       } else if (window.innerWidth <= 420 && textLength > 9) {
-        return 42; // Schriftgröße 40px für Bildschirmbreiten von 401px bis 420px und Textlänge über 9
+        return 42; 
       } else if (window.innerWidth <= 475 && textLength <= 9) {
-        return 66; // Schriftgröße 66px für Bildschirmbreiten von 421px bis 475px und Textlänge 9 oder weniger
+        return 66; 
       } else if (window.innerWidth <= 625 && textLength > 9) {
-        return 60; // Schriftgröße 60px für Bildschirmbreiten von 476px bis 575px und Textlänge über 9
+        return 60; 
       } else if (window.innerWidth <= 1200 && textLength > 9) {
-        return 90; // Schriftgröße 60px für Bildschirmbreiten von 476px bis 575px und Textlänge über 9
+        return 90; 
       } else if (window.innerWidth <= 1350 && textLength > 9) {
-        return 70; // Schriftgröße 80px für Bildschirmbreiten bis 1350px und Textlänge über 9
+        return 70; 
       } else {
-        return 90; // Standard-Schriftgröße 90px für größere Bildschirme oder Textlänge 9 oder weniger
+        return 90; 
       }
     }
-    return 90; // Standard-Schriftgröße, falls Element nicht gefunden wird
+    return 90; 
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    // Eventuell benötigte Logik bei Größenänderungen des Fensters
   }
 }
   
