@@ -47,4 +47,29 @@ selectedLanguage: string = 'en';
         once: true
     });
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrollen zum Seitenanfang
+  }
+
+  scrollToAboutMe() {
+    const aboutMeElement = document.getElementById('about-me');
+    if (aboutMeElement) {
+      aboutMeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  scrollToSkills() {
+    const skillsElement = document.getElementById('my-skills');
+    if (skillsElement) {
+      skillsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  scrollToPortfolio() {
+    const portfolioElement = document.getElementById('portfolio');
+    if (portfolioElement) {
+      portfolioElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

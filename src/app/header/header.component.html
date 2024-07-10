@@ -1,11 +1,11 @@
 <header>
-    <a [routerLink]="['/main-content']">
+    <a [routerLink]="['/main-content']" (click)="scrollToTop()">
         <img class="logo" src="../../assets/img/my-logo.png" alt="">
     </a>
     <div class="menu">
-        <a (click)="handleLinkClick($event)" href="#about-me" class="link">{{'header' | translate}}</a>
-        <a (click)="handleLinkClick($event)" href="#my-skills" class="link">Skills</a>
-        <a (click)="handleLinkClick($event)" href="#portfolio" class="link">Portfolio</a>
+        <a [routerLink]="['/main-content']" fragment="about-me" (click)="scrollToAboutMe(); handleLinkClick($event)" class="link">{{'header' | translate}}</a>
+        <a [routerLink]="['/main-content']" fragment="my-skills" (click)="scrollToSkills(); handleLinkClick($event)" class="link">Skills</a>
+        <a [routerLink]="['/main-content']" fragment="portfolio" (click)="scrollToPortfolio(); handleLinkClick($event)" class="link">Portfolio</a>
         <div class="language">
             <div class="language-switcher" *ngIf="selectedLanguage === 'en'" (click)="switchLanguage('de')">
                 <span>EN</span>

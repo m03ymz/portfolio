@@ -3,8 +3,10 @@
 <section>
     <footer>
         <div class="footer-logo">
-            <img src="../../assets/img/my-logo.png" alt="">
-            <a [routerLink]="['/imprint']" class="link">Imprint</a>
+            <a [routerLink]="['/main-content']" (click)="scrollToTop()">
+                <img src="../../assets/img/my-logo.png" alt="">
+            </a>
+            <a [routerLink]="['/imprint']" (click)="scrollToTopImprint()" class="link">Imprint</a>
         </div>
         <span>© Muhammed Yilmaz 2024</span>
         <div class="footer-references">
@@ -18,6 +20,6 @@
                 <img src="../../assets/img/linkedin-button.png" alt="">
             </a>
         </div>
-        <a [routerLink]="['/imprint']" class="link">Imprint</a>
+        <a [routerLink]="['/imprint']" (click)="scrollToTopImprint()" class="link">Imprint</a>
     </footer>
 </section>

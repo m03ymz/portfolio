@@ -40,16 +40,14 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    >img {
-        height: 70px;
-        cursor: pointer;
-    }
     >a {
         text-decoration: none;
         color: white;
         cursor: pointer;
+        >img {
+            height: 70px;
+        }
     }
-
 }
 
 .footer-references {
@@ -99,11 +97,13 @@ footer {
         }
     }
     .footer-logo {
-        >a {
+        >a.link {
         display: none;
         }
-        >img {
-            margin-bottom: 20px;
+        >a {
+            >img {
+                margin-bottom: 20px;
+            }
         }
     }
     section {

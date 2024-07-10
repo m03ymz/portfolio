@@ -1,8 +1,8 @@
 <div class="overlay" [class.active]="isMenuOpen" (click)="closeMenu()">
-    <a href="#about-me" class="link">About me</a>
-    <a href="#my-skills" class="link">Skills</a>
-    <a href="#portfolio" class="link">Portfolio</a>
-    <a href="#contact" class="link">Contact</a>
+    <a [routerLink]="['/main-content']" fragment="about-me" (click)="scrollToAboutMe()" class="link">{{'header' | translate}}</a>
+    <a [routerLink]="['/main-content']" fragment="my-skills" (click)="scrollToSkills()" class="link">Skills</a>
+    <a [routerLink]="['/main-content']" fragment="portfolio" (click)="scrollToPortfolio()" class="link">Portfolio</a>
+    <a [routerLink]="['/main-content']" fragment="contact" (click)="scrollToContact()" class="link">{{'contact-headline' | translate}}</a>
     <div class="language">
         <div class="language-switcher link" *ngIf="selectedLanguage === 'en'" (click)="switchLanguage('de')">
             <span>EN</span>

@@ -10,4 +10,12 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterComponent {
 
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrollen zum Seitenanfang
+  }
+
+  scrollToTopImprint() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrollen zum Seitenanfang
+  }
+
 }
