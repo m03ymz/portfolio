@@ -21,6 +21,8 @@ selectedLanguage: string = 'en';
   @Input() isMenuOpen: boolean | undefined;
   @Output() toggleMenuEvent = new EventEmitter<void>();
 
+  constructor(private translationService: TranslationService) {}
+
   toggleMenu() {
     this.toggleMenuEvent.emit();
   }
@@ -46,6 +48,13 @@ selectedLanguage: string = 'en';
         easing: 'ease',
         once: true
     });
+     // Überprüfen, ob bereits eine Sprache ausgewählt wurde
+     const currentLanguage = this.translationService.getCurrentLanguage();
+
+     // Falls eine Sprache ausgewählt wurde, verwenden wir sie
+     if (currentLanguage) {
+       this.selectedLanguage = currentLanguage;
+     }
   }
 
   scrollToTop() {

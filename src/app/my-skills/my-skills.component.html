@@ -1,6 +1,6 @@
 <section>
     <img class="shadow" src="../../assets/img/shadow3.png" alt="">
-    <a class="main-button2" href="#contact">Get in touch</a>
+    <a class="main-button2" (click)="scrollToContact()">Get in touch</a>
     <div class="skill-icons" data-aos="zoom-in-right" data-aos-offset="500">
         <div>
             <img src="../../assets/img/angular.png" alt="">
@@ -50,7 +50,7 @@
             <img class="vector" src="../../assets/img/vector3.png" alt="">
         </div>
         <span>{{'my-skills1' | translate}}</span>
-        <a class="main-button" href="#contact">{{'go-to-contact2' | translate}}</a>
+        <a class="main-button" (click)="scrollToContact()">{{'go-to-contact2' | translate}}</a>
     </div>
     </div>
 </section>

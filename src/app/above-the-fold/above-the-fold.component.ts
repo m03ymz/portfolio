@@ -72,5 +72,12 @@ export class AboveTheFoldComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
   }
+
+  scrollToContact() {
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
   
 }
