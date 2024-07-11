@@ -5,7 +5,7 @@
     <div class="menu">
         <a [routerLink]="['/main-content']" fragment="about-me" (click)="scrollToAboutMe(); handleLinkClick($event)" class="link">{{'header' | translate}}</a>
         <a [routerLink]="['/main-content']" fragment="my-skills" (click)="scrollToSkills(); handleLinkClick($event)" class="link">Skills</a>
-        <a [routerLink]="['/main-content']" fragment="portfolio" (click)="scrollToPortfolio(); handleLinkClick($event)" class="link">Portfolio</a>
+        <a [routerLink]="['/main-content']" fragment="portfolio-join" (click)="scrollToPortfolio(); handleLinkClick($event)" class="link">Portfolio</a>
         <div class="language">
             <div class="language-switcher" *ngIf="selectedLanguage === 'en'" (click)="switchLanguage('de')">
                 <span>EN</span>

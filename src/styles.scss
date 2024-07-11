@@ -46,15 +46,19 @@ body {
     scroll-behavior: smooth;
 }
 
+#above-the-fold {
+    scroll-margin-top: 200px; 
+}
+
 #about-me {
-    scroll-margin-top: 25px; 
+    scroll-margin-top: 35px; 
 }
 
 #my-skills {
-    scroll-margin-top: 60px; 
+    scroll-margin-top: 125px; 
 }
 
-#portfolio {
+#portfolio-join {
     scroll-margin-top: 70px; 
 }
 
@@ -73,8 +77,39 @@ body {
       padding-right: calc((100vw - 1920px) / 2); /* Berechnet den zusätzlichen rechten Abstand */
     }
 }
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media (max-width: 1200px) {
+    #my-skills {
+        scroll-margin-top: 70px; 
+    }
+}
+
+@media (max-width: 550px) {
+    #portfolio {
+        scroll-margin-top: 80px; 
+    }
+}
+
+@media (max-width: 450px) {
+    #about-me {
+        scroll-margin-top: 55px; 
+    }
+
+    #portfolio {
+        scroll-margin-top: 100px; 
+    }
+}
+
+@media (max-width: 400px) {
+    #my-skills {
+        scroll-margin-top: 90px; 
+    }
+
+    // #portfolio {
+    //     scroll-margin-top: 50px; 
+    // }
+}
+
 
 
 

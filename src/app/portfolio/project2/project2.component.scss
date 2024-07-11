@@ -17,6 +17,8 @@ section {
     gap: 100px;
     padding-left: 100px;
     margin-right: 300px;
+    position: relative;
+    z-index: 999;
     >img {
         height: 500px;
     }

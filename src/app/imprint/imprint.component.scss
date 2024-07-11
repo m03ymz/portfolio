@@ -23,6 +23,11 @@ section {
     height: 4px;
 }
 
+.line-right {
+    width: 300px;
+    height: 4px;
+}
+
 .imprint-content {
     font-size: 16px;
     line-height: 1.6;
@@ -78,12 +83,18 @@ section {
         height: 4px;
     }
     .line-right {
-        width: 100px;
+        width: 90px;
         height: 4px;
     }
     .imprint-content {
         margin-left: 75px;
         margin-right: 75px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .imprint-header h1 {
+        font-size: 70px;
     }
 }
 
@@ -98,6 +109,9 @@ section {
     .imprint-content {
         margin-left: 50px;
         margin-right: 50px;
+    }
+    .imprint-header h1 {
+        font-size: 60px;
     }
 }
 

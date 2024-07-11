@@ -67,7 +67,7 @@ selectedLanguage: string = 'en';
   }
 
   scrollToPortfolio() {
-    const portfolioElement = document.getElementById('portfolio');
+    const portfolioElement = document.getElementById('portfolio-join');
     if (portfolioElement) {
       portfolioElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

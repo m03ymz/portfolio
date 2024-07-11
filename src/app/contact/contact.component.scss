@@ -6,7 +6,7 @@ section {
     display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .contact-text {
@@ -252,10 +252,26 @@ input:focus::placeholder, textarea:focus::placeholder {
     cursor: pointer;
 }
 
+// .shadow {
+//     position: absolute;
+//     left: -300px;
+//     bottom: -500px;
+// }
+
+// .shadow {
+//     position: absolute;
+//     left: -237px;
+//     bottom: -205px;
+//     height: 500px;
+//     transform: rotate(18deg);
+// }
+
 .shadow {
     position: absolute;
-    left: -300px;
-    bottom: -500px;
+    left: -237px;
+    bottom: -100px;
+    height: 500px;
+    transform: rotate(18deg);
 }
 
 @media screen and (max-width: 1500px) {
@@ -269,9 +285,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 @media screen and (max-width: 1000px) {
-    .shadow {
-        left: -450px;
-    }
+    // .shadow {
+    //     left: -450px;
+    // }
 }
 
 @media screen and (max-width: 900px) {
@@ -356,5 +372,8 @@ input:focus::placeholder, textarea:focus::placeholder {
     }
     .custom-checkbox + label {
         width: 78%;
+    }
+    .shadow {
+        left: -280px;
     }
 }

@@ -85,7 +85,15 @@ section {
     }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 750px) {
+    .references-box {
+        >span {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
     .references-box {
         >span {
             display: none;
