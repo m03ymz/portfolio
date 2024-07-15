@@ -4,20 +4,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 100px 37px 100px;
-    gap: 0px;
+    padding: 36px 0 36px 0;
     font-size: 23px;
     font-weight: 400;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 9999999999999999999999999999999999999999;
-    max-width: 1852.8px; 
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    max-width: 1920px; 
     background-color: rgba(20, 29, 47, 0.9);
     backdrop-filter: blur(5px);
+    >a {
+        height: 70px;
+    }
 }
 
 .menu {
@@ -25,11 +24,13 @@ header {
     justify-content: space-around;
     align-items: center;
     gap: 70px;
+    padding-right: 100px;
 }
 
 .logo {
     height: 70px;
     cursor: pointer;
+    padding-left: 100px;
 }
 
 a {
@@ -104,16 +105,19 @@ a:hover {
 
 @media screen and (max-width: 900px) {
     header {
-        padding: 37px 75px 37px 75px;
         >div a {
             display: none;
         }
+    }
+    .logo {
+        padding-left: 75px;
     }
     .burger-menu {
         display: unset;
         height: 27.72px;
         width: 30px;
         cursor: pointer;
+        padding-right: 75px;
     }
     .language {
         display: none;
@@ -121,14 +125,30 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-    header {
-        padding: 37px 50px 37px 50px;
+    .logo {
+        padding-left: 50px;
+    }
+    .burger-menu {
+        padding-right: 50px;
     }
 }
 
 @media screen and (max-width: 450px) {
-    header {
-        padding: 37px 25px 37px 25px;
+    .logo {
+        padding-left: 25px;
+    }
+    .burger-menu {
+        padding-right: 25px;
     }
 }
+
+@media screen and (min-width: 1921px) {
+    header {
+        max-width: 1928px;
+    }
+    .menu {
+        padding-right: 108px;
+    }
+}
+
 
