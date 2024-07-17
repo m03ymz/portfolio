@@ -143,11 +143,15 @@ section {
     section {
         align-items: center;
         padding-left: unset;
+        overflow-x: hidden;
     }
     .about-me-box {
         width: unset;
         padding-left: 75px;
         padding-right: 75px;
+    }
+    .shadow {
+        top: -50px;
     }
 }
 

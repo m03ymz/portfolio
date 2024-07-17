@@ -74,9 +74,9 @@
   }
   
   /* Verstecken der Scrollbar auf Mobilgeräten */
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     ::-webkit-scrollbar,
     ::-webkit-scrollbar-y {
-        display: none; /* Verstecken der horizontalen und vertikalen Scrollbar auf Mobilgeräten */
+        display: none;
     }
-  }
+  } */
