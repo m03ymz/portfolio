@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, inject } from '@angular/core';
 import { TranslationService } from '../translation.service.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './overlay.component.html',
   styleUrl: './overlay.component.scss'
 })
-export class OverlayComponent {
+export class OverlayComponent implements OnInit {
 
   @Input() isMenuOpen: boolean | undefined;
   @Output() closeOverlay = new EventEmitter<void>();
@@ -24,9 +24,21 @@ export class OverlayComponent {
   translate = inject(TranslationService);
   selectedLanguage: string = 'en';
 
+  constructor(private translationService: TranslationService) {}
+
   switchLanguage(language: string) {
     this.selectedLanguage = language;
     this.translate.switchLanguage(language); 
+  }
+
+  ngOnInit(): void {
+     // Überprüfen, ob bereits eine Sprache ausgewählt wurde
+     const currentLanguage = this.translationService.getCurrentLanguage();
+
+     // Falls eine Sprache ausgewählt wurde, verwenden wir sie
+     if (currentLanguage) {
+       this.selectedLanguage = currentLanguage;
+     }
   }
 
   scrollToAboutMe() {

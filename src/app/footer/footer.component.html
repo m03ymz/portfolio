@@ -6,7 +6,7 @@
             <a [routerLink]="['/main-content']" (click)="scrollToTop()">
                 <img src="../../assets/img/my-logo.png" alt="">
             </a>
-            <a [routerLink]="['/imprint']" (click)="scrollToTopImprint()" class="link">Imprint</a>
+            <a [routerLink]="['/imprint']" (click)="scrollToTopImprint()" class="link">{{'imprint' | translate}}</a>
         </div>
         <span>© Muhammed Yilmaz 2024</span>
         <div class="footer-references">
@@ -20,6 +20,6 @@
                 <img src="../../assets/img/linkedin-button.png" alt="">
             </a>
         </div>
-        <a [routerLink]="['/imprint']" (click)="scrollToTopImprint()" class="link">Imprint</a>
+        <a [routerLink]="['/imprint']" (click)="scrollToTopImprint()" class="link">{{'imprint' | translate}}</a>
     </footer>
 </section>

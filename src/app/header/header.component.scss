@@ -9,6 +9,10 @@ header {
     font-weight: 400;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 9999999999999999999999999999999999999999;
     width: 100%;
     max-width: 1920px; 
@@ -122,6 +126,9 @@ a:hover {
     .language {
         display: none;
     }
+    .close-button {
+        padding-right: 75px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -129,6 +136,9 @@ a:hover {
         padding-left: 50px;
     }
     .burger-menu {
+        padding-right: 50px;
+    }
+    .close-button {
         padding-right: 50px;
     }
 }
@@ -140,14 +150,23 @@ a:hover {
     .burger-menu {
         padding-right: 25px;
     }
+    .close-button {
+        padding-right: 25px;
+    }
 }
 
 @media screen and (min-width: 1921px) {
     header {
-        max-width: 1928px;
+        max-width: none; 
+        width: 100vw; 
     }
+
     .menu {
-        padding-right: 108px;
+        padding-right: calc((100vw - 1920px) / 2 + 100px);
+    }
+
+    .logo {
+        padding-left: calc((100vw - 1920px) / 2 + 100px);
     }
 }
 

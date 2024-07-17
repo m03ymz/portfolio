@@ -9,7 +9,8 @@ section {
     display: flex;
     flex-direction: column;
     padding-bottom: 100px;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow-x: clip;
     >h1 {
         font-size: 90px;
         font-weight: 700;
@@ -82,6 +83,7 @@ section {
 .shadow {
     position: absolute;
     right: -400px;
+    top: -140px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -181,5 +183,20 @@ section {
 @media screen and (max-width: 450px) {
     section {
         z-index: 99;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    section {
+        overflow-x: unset;
+    }
+    .shadow {
+        right: calc(-1px + ((100vw - 1921px) * -0.481));
+    }
+}
+
+@media screen and (min-width: 2750px) {
+    .shadow {
+        right: -400px;
     }
 }
