@@ -17,7 +17,9 @@ section {
 }
 
 .portfolio-img {
-    height: 77%;
+    // height: 77%;
+    // height: 90%;
+    height: 930px;
     z-index: 5;
     display: block;
 }
@@ -29,12 +31,14 @@ section {
 .top-img {
     position: absolute;
     top: 0;
-    left: 100px;
+    // left: 100px;
+    left: 75px;
 }
 
 .bottom-img {
     position: relative; 
-    right: 220px;
+    // right: 220px;
+    right: 170px;
 
 }
 
@@ -281,6 +285,33 @@ section {
     }
     .top-img {
         height: 72%;
+    }
+}
+
+@media screen and (min-width: 1501px) and (max-height: 930px) {
+    .portfolio-img {
+        height: 780px;
+    }
+    .top-img {
+        left: 150px;
+    }
+}
+
+@media screen and (min-width: 1501px) and (max-height: 830px) {
+    .portfolio-img {
+        height: 680px;
+    }
+    .top-img {
+        left: 200px;
+    }
+}
+
+@media screen and (min-width: 1501px) and (max-height: 790px) {
+    .portfolio-img {
+        height: 600px;
+    }
+    .top-img {
+        left: 200px;
     }
 }
 

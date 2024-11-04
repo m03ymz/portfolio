@@ -61,11 +61,13 @@ section {
     right: 0;
     top: 350px;
     z-index: 99999999999999;
+    width: 469px;
+    height: 4px;
 }
 
 .ellipse {
     position: absolute;
-    right: 269px;
+    right: 469px;
     top: 125px;
     height: 450px; 
     z-index: 9999999999999999;
@@ -73,7 +75,7 @@ section {
 
 .portfolio-img {
     position: absolute;
-    right: 275.5px;
+    right: 475.5px;
     top: 129.5px;
     height: 442px;
     clip-path: circle(50%);
@@ -84,6 +86,18 @@ section {
     position: absolute;
     right: -400px;
     top: -140px;
+}
+
+@media screen and (max-width: 1600px) {
+    .vector {
+        width: 269px;
+    }
+    .ellipse {
+        right: 269px;
+    }
+    .portfolio-img {
+        right: 275.5px;
+    }
 }
 
 @media screen and (max-width: 1500px) {

@@ -18,35 +18,33 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MainContentComponent implements AfterViewInit {
 
-  //   constructor(private route: ActivatedRoute) { }
-
-  // ngAfterViewInit(): void {
-  //   this.route.fragment.subscribe(fragment => {
-  //     if (fragment) {
-  //       this.scrollToElement(fragment);
-  //     }
-  //   });
-  // }
-
-  // scrollToElement(elementId: string): void {
-  //   const element = document.getElementById(elementId);
-  //   if (element) {
-  //     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  //   }
-  // }
-
-
   currentFragment: string | null = null; // Variable zur Speicherung des aktuellen Fragments
 
   constructor(private route: ActivatedRoute, private router: Router) { }
+
+  // ngAfterViewInit(): void {
+  //   const fragment = this.route.snapshot.fragment;
+  //   if (fragment) {
+  //     setTimeout(() => {
+  //       this.scrollToElement(fragment);
+  //     }, 0);
+  //   }
+  // }
 
   ngAfterViewInit(): void {
     // Überprüfen und ggf. scrollen zum Fragment beim Initialisieren der Komponente
     const fragment = this.route.snapshot.fragment;
     if (fragment) {
-      setTimeout(() => { // Verzögerung, um sicherzustellen, dass die Seite vollständig geladen ist
-        this.scrollToElement(fragment);
-      }, 0);
+        setTimeout(() => { // Verzögerung, um sicherzustellen, dass die Seite vollständig geladen ist
+            this.scrollToElement(fragment);
+            this.updateFragment(fragment); // URL beim ersten Laden aktualisieren
+        }, 0);
+    } else {
+        // Wenn kein Fragment vorhanden ist, zu 'above-the-fold' scrollen
+        setTimeout(() => {
+            this.scrollToElement('above-the-fold'); // Standardfragment setzen
+            this.updateFragment('above-the-fold'); // URL beim ersten Laden aktualisieren
+        }, 0);
     }
   }
 
@@ -60,7 +58,7 @@ export class MainContentComponent implements AfterViewInit {
   // HostListener für das Scroll-Ereignis der Fensteransicht
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    const fragments = ['about-me', 'my-skills', 'portfolio-join', 'portfolio-el-pollo-loco', 'portfolio-pokedex', 'contact'];
+    const fragments = ['above-the-fold', 'about-me', 'my-skills', 'portfolio-join', 'portfolio-el-pollo-loco', 'portfolio-pokedex', 'contact'];
     const currentPosition = window.pageYOffset + 200; // Offset, um einen Abstand vom oberen Rand zu halten
     let foundFragment = null;
 
@@ -105,5 +103,4 @@ export class MainContentComponent implements AfterViewInit {
   clearFragment(): void {
     this.router.navigateByUrl('/main-content', { replaceUrl: true });
   }
-
 }

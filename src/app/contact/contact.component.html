@@ -1,6 +1,6 @@
 <section>
     <img class="shadow" src="../../assets/img/shadow4.png" alt="">
-    <div class="contact-text" data-aos="fade-right" data-aos-offset="700">
+    <div class="contact-text" data-aos="fade-right" data-aos-offset="300">
         <div>
             <img class="line" src="../../assets/img/line-contact.png" alt="">
             <h4>{{'contact-headline' | translate}}</h4>
@@ -9,7 +9,7 @@
         <span>{{'contact-span1' | translate}}</span>
         <span style="margin-top: 19px;">{{'contact-span2' | translate}}</span>
     </div>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-formular" data-aos="fade-up" data-aos-offset="800">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-formular" data-aos="fade-up" data-aos-offset="500">
 
         <label for="name"></label>
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" [placeholder]="'placeholder1' | translate" required (blur)="onBlur($event)" (ngModelChange)="validateForm()" [ngClass]="{'valid': name.valid && name.touched, 'invalid': !name.valid && name.touched}">
